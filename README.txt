@@ -9,7 +9,7 @@ Chứa các file,foler phân tích thiết kế UML, các sơ đồ, đặc tả
 Chứa các file, folder script SQL, các file liên quan đến cơ sở dữ liệu
 
 #Source
-Chứa các file, folder mã nguồn của chương trình
+Chứa các file, folder mã nguồn của ứng dụng
 
 #Template
 Chứa các file, folder template giao diện của ứng dụng
