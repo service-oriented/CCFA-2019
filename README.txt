@@ -1,9 +1,9 @@
-# CCFA-2019
+﻿# CCFA-2019
 Repository chứa các thành phần của ứng dụng
 (Lưu ý tạo thêm folder nào nên chú thích tại file này).
 
 #Analysis and Design
-Chứa các file,foler phân tích thiết kế UML, các sơ đồ, đặc tả
+Chứa các file, foler phân tích, thiết kế UML
 
 #Database 
 Chứa các file, folder script SQL, các file liên quan đến cơ sở dữ liệu
