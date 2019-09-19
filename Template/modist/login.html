@@ -26,13 +26,47 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+
+<style type="text/css">
+	
+
+	.login,.register{
+		display: none;
+		justify-content: center;
+	}
+	.a{
+		display: flex;
+	}
+	.container-animation{
+		animation: fadeInBottom 0.5s linear forwards;
+		animation-delay: 0.5s;
+		opacity: 0; 
+	}
+	@keyframes fadeInBottom
+	{
+		0%
+		{
+			transform: translateY(50px);
+			opacity: 0; 
+		}
+		100%
+		{
+			transform: translateY(0);
+			opacity: 0.8;
+		}
+	}
+</style>
+
 </head>
 <body>
 	
-	<div class="limiter">
-		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
-			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form">
+	<div class="limiter login a">
+		
+					<div class="container-login100 " style="background-image: url('images/bg-01.jpg');">
+		
+					<div class="container-animation">
+							<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+								<form class="login100-form validate-form ">
 					<span class="login100-form-title p-b-49">
 						Modist
 					</span>
@@ -89,15 +123,83 @@
 							Bạn chưa có tài khoản?
 						</span>
 
-						<a href="#" class="txt2">
+						<a href="#" onclick="openRegister()" class="txt2">
 							Đăng kí?
 						</a>
 					</div>
 				</form>
+					</div>
 			</div>
 		</div>
+		
 	</div>
-	
+	<div class="limiter register">
+		
+			<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+				<div class="container-animation">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+			
+
+					<form class="login100-form validate-form ">
+					<span class="login100-form-title p-b-49">
+						Modist
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Tài khoản không hợp lệ">
+						<span class="label-input100">Tên đăng nhập</span>
+						<input class="input100" type="text" name="username" placeholder="Nhập tài khoản">
+						<span class="focus-input100" data-symbol="&#xf206;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Mật khẩu không hợp lệ">
+						<span class="label-input100">Mật khẩu</span>
+						<input class="input100" type="password" name="pass" placeholder="Nhập mật khẩu">
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+				
+					<div style="margin-top: 30px" class="wrap-input100 validate-input" data-validate="Mật khẩu không khớp">
+						<span class="label-input100">Xác nhận mật khẩu</span>
+						<input class="input100" type="password" name="pass" placeholder="Nhập lại mật khẩu">
+						<span class="focus-input100" data-symbol="&#xf191;"></span>
+					</div>
+					
+					<div class="text-right p-t-8 p-b-31">
+					
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								<a href="login.html" class="nav-link">Đăng ký</a>
+
+							</button>
+						</div>
+					</div>
+
+					<div>
+						
+					</div>				
+
+
+
+					
+					<div class="flex-col-c p-t-155">
+						<span class="txt1 p-b-17">
+							Bạn đã có tài khoản?
+						</span>
+
+						<a href="#"  onclick="openLogin()"  class="txt2">
+							Đăng nhập?
+						</a>
+					</div>
+				</form>
+				</div>
+			</div>
+		
+		</div>
+		
+	</div>
 
 	<div id="dropDownSelect1"></div>
 	
@@ -118,5 +220,24 @@
 <!--===============================================================================================-->
 	<script src="js/loginmain.js"></script>
 
+
+<!--------------------------------------------------------------------------------------------------->
+	<script type="text/javascript">
+		
+	const login = document.querySelector('.login');
+	const register = document.querySelector('.register');
+	function openLogin()
+	{
+		login.classList.add('a');
+		register.classList.remove('a');
+	}
+	function openRegister()
+	{
+		login.classList.remove('a');
+		register.classList.add('a');
+	}
+	</script>
+	<!------------------------------------------- make by Le Hung-------------------------------------->
+<!----------------------------------------------------------------------------------------------------->
 </body>
 </html>
