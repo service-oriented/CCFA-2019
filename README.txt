@@ -1,4 +1,4 @@
-﻿# CCFA-2019
+﻿# CCFA-2019(Consultant Cosmetic and Fashion Automatic)
 Repository chứa các thành phần của ứng dụng
 (Lưu ý tạo thêm folder nào nên chú thích tại file này).
 
