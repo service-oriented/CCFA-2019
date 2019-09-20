@@ -13,3 +13,6 @@ Chứa các file, folder mã nguồn của ứng dụng
 
 #Template
 Chứa các file, folder template giao diện của ứng dụng
+
+#Report
+Chứa các file, folder báo cáo kết quả dự án
