@@ -87,7 +87,7 @@
 	    (object Class "HeThongKhac"
 		quid       	"5D6F136302B0"
 		stereotype 	"Actor")
-	    (object Class "KhachHang"
+	    (object Class "Khach"
 		quid       	"5D6F13A500FA"
 		stereotype 	"Actor"
 		superclasses 	(list inheritance_relationship_list
@@ -181,7 +181,7 @@
 			is_navigable 	TRUE)
 		    (object Role "$UNNAMED$8"
 			quid       	"5D6F166101F0"
-			supplier   	"Use Case View::KhachHang"
+			supplier   	"Use Case View::Khach"
 			quidu      	"5D6F13A500FA")))
 	    (object Association "$UNNAMED$9"
 		quid       	"5D6F1782019E"
@@ -193,7 +193,7 @@
 			is_navigable 	TRUE)
 		    (object Role "$UNNAMED$11"
 			quid       	"5D6F17830307"
-			supplier   	"Use Case View::KhachHang"
+			supplier   	"Use Case View::Khach"
 			quidu      	"5D6F13A500FA")))
 	    (object Association "$UNNAMED$12"
 		quid       	"5D6F17DC0220"
@@ -236,7 +236,7 @@
 		roles      	(list role_list
 		    (object Role "$UNNAMED$22"
 			quid       	"5D7798BA0356"
-			supplier   	"Use Case View::KhachHang"
+			supplier   	"Use Case View::Khach"
 			quidu      	"5D6F13A500FA"
 			is_navigable 	TRUE)
 		    (object Role "$UNNAMED$23"
@@ -253,7 +253,7 @@
 			is_navigable 	TRUE)
 		    (object Role "$UNNAMED$26"
 			quid       	"5D7798CE0254"
-			supplier   	"Use Case View::KhachHang"
+			supplier   	"Use Case View::Khach"
 			quidu      	"5D6F13A500FA")))
 	    (object Association "$UNNAMED$27"
 		quid       	"5D783F110349"
@@ -355,7 +355,7 @@
 			is_navigable 	TRUE)
 		    (object Role "$UNNAMED$50"
 			quid       	"5D784A8603D3"
-			supplier   	"Use Case View::KhachHang"
+			supplier   	"Use Case View::Khach"
 			quidu      	"5D6F13A500FA"
 			is_navigable 	TRUE)))
 	    (object Association "$UNNAMED$51"
@@ -368,7 +368,7 @@
 			is_navigable 	TRUE)
 		    (object Role "$UNNAMED$53"
 			quid       	"5D784A8A0124"
-			supplier   	"Use Case View::KhachHang"
+			supplier   	"Use Case View::Khach"
 			quidu      	"5D6F13A500FA"
 			is_navigable 	TRUE)))
 	    (object Association "$UNNAMED$54"
@@ -679,7 +679,7 @@
 				supplier   	@5
 				vertices   	(list Points
 				    (2698, 464)
-				    (2334, 716))
+				    (2332, 717))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$35" @10
 				Parent_View 	@8
@@ -691,7 +691,7 @@
 				supplier   	@7
 				vertices   	(list Points
 				    (2698, 464)
-				    (3063, 213))
+				    (3064, 212))
 				line_style 	0)))
 		    (object AssociationViewNew "$UNNAMED$36" @11
 			location   	(3038, 592)
@@ -709,7 +709,7 @@
 				supplier   	@6
 				vertices   	(list Points
 				    (3038, 592)
-				    (2993, 824))
+				    (2992, 824))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$38" @13
 				Parent_View 	@11
@@ -721,7 +721,7 @@
 				supplier   	@7
 				vertices   	(list Points
 				    (3038, 592)
-				    (3084, 360))
+				    (3083, 360))
 				line_style 	0)))
 		    (object UseCaseView "Use Case View::CungCapThongTin" @14
 			location   	(2712, 2247)
@@ -791,7 +791,7 @@
 				supplier   	@14
 				vertices   	(list Points
 				    (3311, 2056)
-				    (2820, 2210))
+				    (2820, 2208))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$47" @18
 				Parent_View 	@16
@@ -803,7 +803,7 @@
 				supplier   	@15
 				vertices   	(list Points
 				    (3311, 2056)
-				    (3803, 1903))
+				    (3805, 1903))
 				line_style 	0)))
 		    (object UseCaseView "Use Case View::PhanHoi" @19
 			location   	(2426, 1701)
@@ -853,7 +853,7 @@
 			fill_color 	13434879
 			quidu      	"5D77989803BE"
 			height     	118)
-		    (object ClassView "Class" "Use Case View::KhachHang" @21
+		    (object ClassView "Class" "Use Case View::Khach" @21
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -874,7 +874,7 @@
 			    nlines     	2
 			    max_width  	325
 			    justify    	0
-			    label      	"KhachHang")
+			    label      	"Khach")
 			icon       	"Actor"
 			icon_style 	"Icon"
 			line_color 	3342489
@@ -897,7 +897,7 @@
 				supplier   	@19
 				vertices   	(list Points
 				    (3153, 1466)
-				    (2534, 1663))
+				    (2534, 1661))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$50" @24
 				Parent_View 	@22
@@ -927,7 +927,7 @@
 				supplier   	@20
 				vertices   	(list Points
 				    (3264, 1234)
-				    (2756, 1218))
+				    (2756, 1219))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$53" @27
 				Parent_View 	@25
@@ -939,7 +939,7 @@
 				supplier   	@21
 				vertices   	(list Points
 				    (3264, 1234)
-				    (3773, 1251))
+				    (3772, 1250))
 				line_style 	0)))
 		    (object InheritView "" @28
 			stereotype 	TRUE
@@ -1090,7 +1090,7 @@
 				supplier   	@29
 				vertices   	(list Points
 				    (780, 986)
-				    (1002, 776))
+				    (1003, 774))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$32" @36
 				Parent_View 	@34
@@ -1102,7 +1102,7 @@
 				supplier   	@33
 				vertices   	(list Points
 				    (780, 986)
-				    (559, 1197))
+				    (559, 1194))
 				line_style 	0)))
 		    (object AssociationViewNew "$UNNAMED$39" @37
 			location   	(1008, 1052)
@@ -1120,7 +1120,7 @@
 				supplier   	@30
 				vertices   	(list Points
 				    (1008, 1052)
-				    (1457, 875))
+				    (1273, 946))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$41" @39
 				Parent_View 	@37
@@ -1132,7 +1132,7 @@
 				supplier   	@33
 				vertices   	(list Points
 				    (1008, 1052)
-				    (559, 1229))
+				    (559, 1228))
 				line_style 	0)))
 		    (object AssociationViewNew "$UNNAMED$54" @40
 			location   	(921, 1348)
@@ -1150,7 +1150,7 @@
 				supplier   	@31
 				vertices   	(list Points
 				    (921, 1348)
-				    (1283, 1430))
+				    (1283, 1429))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$56" @42
 				Parent_View 	@40
@@ -1190,7 +1190,7 @@
 				supplier   	@32
 				vertices   	(list Points
 				    (1094, 1189)
-				    (1630, 1134))
+				    (1628, 1133))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$68" @46
 				Parent_View 	@44
@@ -1202,7 +1202,7 @@
 				supplier   	@33
 				vertices   	(list Points
 				    (1094, 1189)
-				    (559, 1245))
+				    (559, 1247))
 				line_style 	0)))
 		    (object UseCaseView "Use Case View::PhanTichNguonDuLieu" @47
 			location   	(1441, 2374)
@@ -1350,7 +1350,7 @@
 				supplier   	@48
 				vertices   	(list Points
 				    (1011, 1925)
-				    (1448, 1821))
+				    (1429, 1824))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$65" @56
 				Parent_View 	@54
@@ -1392,7 +1392,7 @@
 				supplier   	@50
 				vertices   	(list Points
 				    (1166, 2071)
-				    (574, 2048))
+				    (574, 2047))
 				line_style 	0)))))))
     root_category 	(object Class_Category "Logical View"
 	quid       	"5D6F12E401BC"
@@ -1401,98 +1401,389 @@
 	subsystem  	"Component View"
 	quidu      	"5D6F12E401BE"
 	logical_models 	(list unit_reference_list
-	    (object Class "Khach"
+	    (object Class "Guest"
 		quid       	"5D79ED090388"
 		operations 	(list Operations
-		    (object Operation "guiYeuCauTuVan"
+		    (object Operation "sendConsultantionRequest"
 			quid       	"5D79EE6D00EB"
 			concurrency 	"Sequential"
 			opExportControl 	"Public"
 			uid        	0)
-		    (object Operation "nhanKetQuaTuVan"
+		    (object Operation "receiveConsultationResults"
 			quid       	"5D79EE8B008B"
 			concurrency 	"Sequential"
 			opExportControl 	"Public"
 			uid        	0)
-		    (object Operation "guiPhanHoi"
+		    (object Operation "feedback"
 			quid       	"5D79EEC0010C"
 			concurrency 	"Sequential"
 			opExportControl 	"Public"
 			uid        	0)
-		    (object Operation "nhanTroGiup"
+		    (object Operation "receiveAnswer"
 			quid       	"5D79EF8200CA"
 			concurrency 	"Sequential"
 			opExportControl 	"Public"
-			uid        	0))
-		class_attributes 	(list class_attribute_list
-		    (object ClassAttribute "ten"
-			quid       	"5D79ED3F01F0")
-		    (object ClassAttribute "ngaySinh"
-			quid       	"5D79ED4A00A7")
-		    (object ClassAttribute "gioiTinh"
-			quid       	"5D79ED4F0191")
-		    (object ClassAttribute "soThich"
-			quid       	"5D79ED580123")
-		    (object ClassAttribute "canNang"
-			quid       	"5D79ED5E0068")
-		    (object ClassAttribute "chieuCao"
-			quid       	"5D79EDB600EE")
-		    (object ClassAttribute "congViec"
-			quid       	"5D79EDBD0003")
-		    (object ClassAttribute "vocdang"
-			quid       	"5D79EDC8013B")))
-	    (object Class "SanPham"
-		quid       	"5D79F3A8032E"
-		operations 	(list Operations
-		    (object Operation "layThongTinSanPham"
-			quid       	"5D79F5380053"
+			uid        	0)
+		    (object Operation "addProductToLike"
+			quid       	"5D7B2EE10116"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "signIn"
+			quid       	"5D831ED3014F"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "signUp"
+			quid       	"5D831ED801CB"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "updatePersonalInformation"
+			quid       	"5D8323530294"
 			concurrency 	"Sequential"
 			opExportControl 	"Public"
 			uid        	0))
 		class_attributes 	(list class_attribute_list
-		    (object ClassAttribute "ten"
-			quid       	"5D79F487036D")
-		    (object ClassAttribute "ngaySX"
-			quid       	"5D79F48C039B")
-		    (object ClassAttribute "loai"
-			quid       	"5D79F4BB02EC")
-		    (object ClassAttribute "mauSac"
-			quid       	"5D79F4D201F1")
-		    (object ClassAttribute "mieuTa"
-			quid       	"5D7A624D010D")))
-	    (object Class "MyPham"
+		    (object ClassAttribute "fullName"
+			quid       	"5D83AE500230"
+			type       	"String")
+		    (object ClassAttribute "dateOfBirth"
+			quid       	"5D79ED4A00A7"
+			type       	"Date")
+		    (object ClassAttribute "gender"
+			quid       	"5D79ED4F0191"
+			type       	"boolean")
+		    (object ClassAttribute "weight"
+			quid       	"5D79ED5E0068"
+			type       	"float")
+		    (object ClassAttribute "height"
+			quid       	"5D79EDB600EE"
+			type       	"float")
+		    (object ClassAttribute "job"
+			quid       	"5D79EDBD0003"
+			type       	"String")
+		    (object ClassAttribute "body"
+			quid       	"5D79EDC8013B"
+			type       	"String")
+		    (object ClassAttribute "phone"
+			quid       	"5D7B3E4B0009"
+			type       	"String")
+		    (object ClassAttribute "email"
+			quid       	"5D7B3E4E0008"
+			type       	"String")
+		    (object ClassAttribute "hairColor"
+			quid       	"5D82F0C50104"
+			type       	"String")
+		    (object ClassAttribute "skinColor"
+			quid       	"5D82F0CB020D"
+			type       	"String")
+		    (object ClassAttribute "sensitizers"
+			quid       	"5D82F0CC00E4"
+			type       	"List<Ingredient>")
+		    (object ClassAttribute "lipThickness"
+			quid       	"5D82F96203D8"
+			type       	"String")
+		    (object ClassAttribute "faceShape"
+			quid       	"5D82F97E02CD"
+			type       	"String")
+		    (object ClassAttribute "favorite"
+			quid       	"5D83B0C70111"
+			type       	"String")
+		    (object ClassAttribute "account"
+			quid       	"5D845E3D015D"
+			type       	"Account"
+			quidu      	"5D7A627A01AF")))
+	    (object Class "Product"
+		quid       	"5D79F3A8032E"
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "code"
+			quid       	"5D79F487036D"
+			type       	"String")
+		    (object ClassAttribute "publishingDate"
+			quid       	"5D79F48C039B"
+			type       	"Date")
+		    (object ClassAttribute "type"
+			quid       	"5D79F4BB02EC"
+			type       	"boolean")
+		    (object ClassAttribute "category"
+			quid       	"5D84352901A5"
+			type       	"String")
+		    (object ClassAttribute "color"
+			quid       	"5D79F4D201F1"
+			type       	"String")
+		    (object ClassAttribute "description"
+			quid       	"5D7A624D010D"
+			type       	"String")
+		    (object ClassAttribute "images"
+			quid       	"5D7B2D5D0238"
+			type       	"List<Image>")
+		    (object ClassAttribute "view"
+			quid       	"5D7B2FDD0146"
+			type       	"int")
+		    (object ClassAttribute "madeIn"
+			quid       	"5D7B31B70247"
+			type       	"String")
+		    (object ClassAttribute "createDate"
+			quid       	"5D84647A01DC"
+			type       	"Date")
+		    (object ClassAttribute "createBy"
+			quid       	"5D8464EC0289"
+			type       	"Account"
+			quidu      	"5D7A627A01AF")
+		    (object ClassAttribute "title"
+			quid       	"5D8465040187"
+			type       	"String")
+		    (object ClassAttribute "keyword"
+			quid       	"5D84658F0365"
+			type       	"String")))
+	    (object Class "CosmeticProduct"
 		quid       	"5D79F3E3003C"
 		superclasses 	(list inheritance_relationship_list
 		    (object Inheritance_Relationship
 			quid       	"5D79F4650331"
-			supplier   	"Logical View::SanPham"
-			quidu      	"5D79F3A8032E")))
-	    (object Class "ThoiTrang"
+			supplier   	"Logical View::Product"
+			quidu      	"5D79F3A8032E"))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "ingredients"
+			quid       	"5D7B31B102D1"
+			type       	"List<Ingredient>")
+		    (object ClassAttribute "sideEffects"
+			quid       	"5D82F9F501A8"
+			type       	"String")
+		    (object ClassAttribute "fragrant"
+			quid       	"5D8318980026"
+			type       	"String")
+		    (object ClassAttribute "meaning"
+			quid       	"5D839B34010F"
+			type       	"String")))
+	    (object Class "FashionProduct"
 		quid       	"5D79F475039D"
 		superclasses 	(list inheritance_relationship_list
 		    (object Inheritance_Relationship
 			quid       	"5D79F48000CD"
-			supplier   	"Logical View::SanPham"
-			quidu      	"5D79F3A8032E")))
-	    (object Class "TaiKhoan"
+			supplier   	"Logical View::Product"
+			quidu      	"5D79F3A8032E"))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "size"
+			quid       	"5D7B310D032A"
+			type       	"String")
+		    (object ClassAttribute "material"
+			quid       	"5D7B31C901D2"
+			type       	"String")))
+	    (object Class "Account"
 		quid       	"5D7A627A01AF"
 		class_attributes 	(list class_attribute_list
-		    (object ClassAttribute "tenTaiKhoan"
-			quid       	"5D7A67950197")
-		    (object ClassAttribute "matKhau"
-			quid       	"5D7A679B037C")))
-	    (object Class "VaiTro"
-		quid       	"5D7A67B4012F"
-		class_attributes 	(list class_attribute_list
-		    (object ClassAttribute "tenVaiTro"
-			quid       	"5D7A6806025F")))
-	    (object Class "PhanHoi"
+		    (object ClassAttribute "username"
+			quid       	"5D7A67950197"
+			type       	"String")
+		    (object ClassAttribute "password"
+			quid       	"5D7A679B037C"
+			type       	"String")
+		    (object ClassAttribute "status"
+			quid       	"5D82EA96026B"
+			type       	"boolean")
+		    (object ClassAttribute "role"
+			quid       	"5D82EA9C0355"
+			type       	"boolean")))
+	    (object Class "Message"
 		quid       	"5D7A68320347"
 		class_attributes 	(list class_attribute_list
-		    (object ClassAttribute "noiDung"
-			quid       	"5D7A6845005E")))
-	    (object Class "LichSu"
-		quid       	"5D7A69460300"))
+		    (object ClassAttribute "title"
+			quid       	"5D7A6845005E"
+			type       	"String")
+		    (object ClassAttribute "content"
+			quid       	"5D7B3F7D01EC"
+			type       	"String")))
+	    (object Class "Api"
+		quid       	"5D7B3BB50318"
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "url"
+			quid       	"5D7B3BBF02EA"
+			type       	"String")
+		    (object ClassAttribute "status"
+			quid       	"5D7B4614022A"
+			type       	"boolean")))
+	    (object Class "Feedback"
+		quid       	"5D82F3C1034C"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"5D82F4370131"
+			supplier   	"Logical View::Message"
+			quidu      	"5D7A68320347"))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "sentTime"
+			quid       	"5D82F4C40116"
+			type       	"Date")
+		    (object ClassAttribute "status"
+			quid       	"5D843D6200DB"
+			type       	"int")
+		    (object ClassAttribute "sender"
+			quid       	"5D82F4D1002A"
+			type       	"Guest"
+			quidu      	"5D79ED090388")))
+	    (object Class "Image"
+		quid       	"5D83B77A0101"
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "link"
+			quid       	"5D83B78100C8"
+			type       	"String")))
+	    (object Class "Answer"
+		quid       	"5D83BAC602F6"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"5D83BB0D0366"
+			supplier   	"Logical View::Message"
+			quidu      	"5D7A68320347"))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "replyTime"
+			quid       	"5D83BAF70307"
+			type       	"Date")))
+	    (object Class "Ingredient"
+		quid       	"5D83BC54023A"
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "name"
+			quid       	"5D83BC640087"
+			type       	"String")
+		    (object ClassAttribute "description"
+			quid       	"5D83BC6D0211"
+			type       	"String")))
+	    (object Class "History"
+		quid       	"5D83BD1D0195"
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "guest"
+			quid       	"5D83BD2903AE"
+			type       	"Guest"
+			quidu      	"5D79ED090388")
+		    (object ClassAttribute "products"
+			quid       	"5D83BD3D01BB"
+			type       	"List<Product>")
+		    (object ClassAttribute "viewTime"
+			quid       	"5D83CA440225"
+			type       	"Date")))
+	    (object Class "Like"
+		quid       	"5D83BE040377"
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "guest"
+			quid       	"5D83BE540307"
+			type       	"Guest"
+			quidu      	"5D79ED090388")
+		    (object ClassAttribute "products"
+			quid       	"5D83BE5A0126"
+			type       	"List<Product>")))
+	    (object Association "$UNNAMED$81"
+		quid       	"5D7B39DA01A1"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$82"
+			quid       	"5D7B39DB0026"
+			supplier   	"Logical View::Account"
+			quidu      	"5D7A627A01AF"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$83"
+			quid       	"5D7B39DB002A"
+			supplier   	"Logical View::Guest"
+			quidu      	"5D79ED090388")))
+	    (object Association "$UNNAMED$84"
+		quid       	"5D7B3B1F0098"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$85"
+			quid       	"5D7B3B200318"
+			supplier   	"Logical View::Message"
+			quidu      	"5D7A68320347"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$86"
+			quid       	"5D7B3B20031B"
+			supplier   	"Logical View::Guest"
+			quidu      	"5D79ED090388")))
+	    (object Association "$UNNAMED$87"
+		quid       	"5D7B3B3F0229"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$88"
+			quid       	"5D7B3B400197"
+			supplier   	"Logical View::Product"
+			quidu      	"5D79F3A8032E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$89"
+			quid       	"5D7B3B40019B"
+			supplier   	"Logical View::Guest"
+			quidu      	"5D79ED090388")))
+	    (object Association "$UNNAMED$90"
+		quid       	"5D7B42C1025C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$91"
+			quid       	"5D7B42C200B6"
+			supplier   	"Logical View::Api"
+			quidu      	"5D7B3BB50318"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$92"
+			quid       	"5D7B42C200B8"
+			supplier   	"Logical View::Guest"
+			quidu      	"5D79ED090388")))
+	    (object Association "$UNNAMED$93"
+		quid       	"5D7B48CD01E9"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$94"
+			quid       	"5D7B48CD0312"
+			supplier   	"Logical View::Account"
+			quidu      	"5D7A627A01AF"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$95"
+			quid       	"5D7B48CD0322"
+			supplier   	"Logical View::Guest"
+			quidu      	"5D79ED090388"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$96"
+		quid       	"5D7B48D103CD"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$97"
+			quid       	"5D7B48D20256"
+			supplier   	"Logical View::Api"
+			quidu      	"5D7B3BB50318"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$98"
+			quid       	"5D7B48D20258"
+			supplier   	"Logical View::Guest"
+			quidu      	"5D79ED090388"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$99"
+		quid       	"5D7B48D90014"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$100"
+			quid       	"5D7B48DA0331"
+			supplier   	"Logical View::Guest"
+			quidu      	"5D79ED090388"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$101"
+			quid       	"5D7B48DA0350"
+			supplier   	"Logical View::Message"
+			quidu      	"5D7A68320347"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$102"
+		quid       	"5D7B48E6035C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$103"
+			quid       	"5D7B48E7011A"
+			supplier   	"Logical View::Guest"
+			quidu      	"5D79ED090388"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$104"
+			quid       	"5D7B48E70129"
+			supplier   	"Logical View::Product"
+			quidu      	"5D79F3A8032E"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$105"
+		quid       	"5D7B48F800F9"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$106"
+			quid       	"5D7B48F8036A"
+			supplier   	"Logical View::Account"
+			quidu      	"5D7A627A01AF"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$107"
+			quid       	"5D7B48F8037A"
+			supplier   	"Logical View::Product"
+			quidu      	"5D79F3A8032E"
+			is_navigable 	TRUE))))
 	logical_presentations 	(list unit_reference_list
 	    (object ClassDiagram "Main"
 		quid       	"5D6F12E50084"
@@ -1500,14 +1791,14 @@
 		zoom       	100
 		max_height 	28350
 		max_width  	21600
-		origin_x   	0
+		origin_x   	106
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object ClassView "Class" "Logical View::Khach" @60
+		    (object ClassView "Class" "Logical View::CosmeticProduct" @60
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(528, 572)
+			location   	(3074, 1075)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1519,19 +1810,19 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@60
-			    location   	(327, 216)
+			    location   	(2796, 919)
 			    fill_color 	13434879
 			    nlines     	1
-			    max_width  	402
+			    max_width  	556
 			    justify    	0
-			    label      	"Khach")
+			    label      	"CosmeticProduct")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
-			quidu      	"5D79ED090388"
+			quidu      	"5D79F3E3003C"
 			compartment 	(object Compartment
 			    Parent_View 	@60
-			    location   	(327, 277)
+			    location   	(2796, 980)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -1542,20 +1833,20 @@
 				color      	0
 				default_color 	TRUE)
 			    icon_style 	"Icon"
-			    fill_color 	13434879
+			    fill_color 	16777215
 			    anchor     	2
-			    nlines     	13
-			    max_width  	421
+			    nlines     	5
+			    max_width  	584
 			    justify    	1)
-			width      	420
-			height     	736
+			width      	574
+			height     	336
 			annotation 	8
 			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::SanPham" @61
+		    (object ClassView "Class" "Logical View::FashionProduct" @61
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(1872, 306)
+			location   	(3115, 594)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1567,19 +1858,19 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@61
-			    location   	(1643, 100)
+			    location   	(2950, 488)
 			    fill_color 	13434879
 			    nlines     	1
-			    max_width  	458
+			    max_width  	330
 			    justify    	0
-			    label      	"SanPham")
+			    label      	"FashionProduct")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
-			quidu      	"5D79F3A8032E"
+			quidu      	"5D79F475039D"
 			compartment 	(object Compartment
 			    Parent_View 	@61
-			    location   	(1643, 161)
+			    location   	(2950, 549)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -1590,20 +1881,20 @@
 				color      	0
 				default_color 	TRUE)
 			    icon_style 	"Icon"
-			    fill_color 	13434879
+			    fill_color 	16777215
 			    anchor     	2
-			    nlines     	7
-			    max_width  	456
+			    nlines     	3
+			    max_width  	346
 			    justify    	1)
-			width      	476
-			height     	436
+			width      	348
+			height     	236
 			annotation 	8
 			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::MyPham" @62
+		    (object ClassView "Class" "Logical View::Api" @62
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(2555, 687)
+			location   	(378, 465)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1615,99 +1906,19 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@62
-			    location   	(2459, 636)
+			    location   	(213, 359)
 			    fill_color 	13434879
 			    nlines     	1
-			    max_width  	192
+			    max_width  	330
 			    justify    	0
-			    label      	"MyPham")
+			    label      	"Api")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
-			quidu      	"5D79F3E3003C"
-			width      	210
-			height     	126
-			annotation 	8
-			autoResize 	TRUE)
-		    (object InheritView "" @63
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5D79F4650331"
-			client     	@62
-			supplier   	@61
-			vertices   	(list Points
-			    (2449, 628)
-			    (2110, 439))
-			line_style 	0)
-		    (object ClassView "Class" "Logical View::ThoiTrang" @64
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(1249, 715)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@64
-			    location   	(1147, 664)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	204
-			    justify    	0
-			    label      	"ThoiTrang")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5D79F475039D"
-			width      	222
-			height     	126
-			annotation 	8
-			autoResize 	TRUE)
-		    (object InheritView "" @65
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5D79F48000CD"
-			client     	@64
-			supplier   	@61
-			vertices   	(list Points
-			    (1342, 651)
-			    (1633, 462))
-			line_style 	0)
-		    (object ClassView "Class" "Logical View::TaiKhoan" @66
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(1105, 1222)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@66
-			    location   	(972, 1116)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	266
-			    justify    	0
-			    label      	"TaiKhoan")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5D7A627A01AF"
+			quidu      	"5D7B3BB50318"
 			compartment 	(object Compartment
-			    Parent_View 	@66
-			    location   	(972, 1177)
+			    Parent_View 	@62
+			    location   	(213, 420)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -1721,17 +1932,17 @@
 			    fill_color 	13434879
 			    anchor     	2
 			    nlines     	3
-			    max_width  	263
+			    max_width  	350
 			    justify    	1)
-			width      	284
+			width      	348
 			height     	236
 			annotation 	8
 			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::VaiTro" @67
+		    (object ClassView "Class" "Logical View::Message" @63
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(1887, 906)
+			location   	(870, 494)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1742,68 +1953,290 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@67
-			    location   	(1779, 825)
+			    Parent_View 	@63
+			    location   	(709, 388)
 			    fill_color 	13434879
 			    nlines     	1
-			    max_width  	216
+			    max_width  	322
 			    justify    	0
-			    label      	"VaiTro")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5D7A67B4012F"
-			compartment 	(object Compartment
-			    Parent_View 	@67
-			    location   	(1779, 886)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    icon_style 	"Icon"
-			    fill_color 	13434879
-			    anchor     	2
-			    nlines     	2
-			    max_width  	213
-			    justify    	1)
-			width      	234
-			height     	186
-			annotation 	8
-			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::PhanHoi" @68
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(2329, 1272)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@68
-			    location   	(2232, 1191)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	194
-			    justify    	0
-			    label      	"PhanHoi")
+			    label      	"Message")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"5D7A68320347"
 			compartment 	(object Compartment
-			    Parent_View 	@68
-			    location   	(2232, 1252)
+			    Parent_View 	@63
+			    location   	(709, 449)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	3
+			    max_width  	337
+			    justify    	1)
+			width      	340
+			height     	236
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Guest" @64
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1652, 803)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@64
+			    location   	(1373, 147)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	558
+			    justify    	0
+			    label      	"Guest")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5D79ED090388"
+			compartment 	(object Compartment
+			    Parent_View 	@64
+			    location   	(1373, 208)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	25
+			    max_width  	556
+			    justify    	1)
+			width      	576
+			height     	1336
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Account" @65
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(403, 1403)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@65
+			    location   	(222, 1247)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	362
+			    justify    	0
+			    label      	"Account")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5D7A627A01AF"
+			compartment 	(object Compartment
+			    Parent_View 	@65
+			    location   	(222, 1308)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	5
+			    max_width  	381
+			    justify    	1)
+			width      	380
+			height     	336
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Product" @66
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2310, 430)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@66
+			    location   	(2093, 49)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	434
+			    justify    	0
+			    label      	"Product")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5D79F3A8032E"
+			compartment 	(object Compartment
+			    Parent_View 	@66
+			    location   	(2093, 110)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	14
+			    max_width  	431
+			    justify    	1)
+			width      	452
+			height     	786
+			annotation 	8
+			autoResize 	TRUE)
+		    (object InheritView "" @67
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5D79F4650331"
+			client     	@60
+			supplier   	@66
+			vertices   	(list Points
+			    (2876, 906)
+			    (2536, 621))
+			line_style 	0)
+		    (object InheritView "" @68
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5D79F48000CD"
+			client     	@61
+			supplier   	@66
+			vertices   	(list Points
+			    (2940, 558)
+			    (2536, 476))
+			line_style 	0)
+		    (object ClassView "Class" "Logical View::Feedback" @69
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(387, 969)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@69
+			    location   	(221, 838)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	332
+			    justify    	0
+			    label      	"Feedback")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5D82F3C1034C"
+			compartment 	(object Compartment
+			    Parent_View 	@69
+			    location   	(221, 899)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	4
+			    max_width  	346
+			    justify    	1)
+			width      	350
+			height     	286
+			annotation 	8
+			autoResize 	TRUE)
+		    (object InheritView "" @70
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5D82F4370131"
+			client     	@69
+			supplier   	@63
+			vertices   	(list Points
+			    (531, 825)
+			    (749, 612))
+			line_style 	0)
+		    (object ClassView "Class" "Logical View::Image" @71
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2995, 237)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@71
+			    location   	(2869, 156)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	252
+			    justify    	0
+			    label      	"Image")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5D83B77A0101"
+			compartment 	(object Compartment
+			    Parent_View 	@71
+			    location   	(2869, 217)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -1817,10 +2250,212 @@
 			    fill_color 	13434879
 			    anchor     	2
 			    nlines     	2
-			    max_width  	191
+			    max_width  	265
 			    justify    	1)
-			width      	212
+			width      	270
 			height     	186
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Answer" @72
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(981, 894)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@72
+			    location   	(811, 813)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	340
+			    justify    	0
+			    label      	"Answer")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5D83BAC602F6"
+			compartment 	(object Compartment
+			    Parent_View 	@72
+			    location   	(811, 874)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	2
+			    max_width  	356
+			    justify    	1)
+			width      	358
+			height     	186
+			annotation 	8
+			autoResize 	TRUE)
+		    (object InheritView "" @73
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5D83BB0D0366"
+			client     	@72
+			supplier   	@63
+			vertices   	(list Points
+			    (954, 800)
+			    (902, 612))
+			line_style 	0)
+		    (object ClassView "Class" "Logical View::Ingredient" @74
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2376, 1057)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@74
+			    location   	(2186, 951)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	380
+			    justify    	0
+			    label      	"Ingredient")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5D83BC54023A"
+			compartment 	(object Compartment
+			    Parent_View 	@74
+			    location   	(2186, 1012)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	3
+			    max_width  	400
+			    justify    	1)
+			width      	398
+			height     	236
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::History" @75
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2403, 1469)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@75
+			    location   	(2160, 1338)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	486
+			    justify    	0
+			    label      	"History")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5D83BD1D0195"
+			compartment 	(object Compartment
+			    Parent_View 	@75
+			    location   	(2160, 1399)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	4
+			    max_width  	509
+			    justify    	1)
+			width      	504
+			height     	286
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Like" @76
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(960, 1362)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@76
+			    location   	(717, 1256)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	486
+			    justify    	0
+			    label      	"Like")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5D83BE040377"
+			compartment 	(object Compartment
+			    Parent_View 	@76
+			    location   	(717, 1317)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	3
+			    max_width  	509
+			    justify    	1)
+			width      	504
+			height     	236
 			annotation 	8
 			autoResize 	TRUE)))))
     root_subsystem 	(object SubSystem "Component View"
