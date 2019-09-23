@@ -182,7 +182,7 @@ iframe {
 
 .wrap-login100 {
   width: 500px;
-  background: #fff;
+  background-color: white;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -216,16 +216,16 @@ iframe {
 }
 
 .label-input100 {
-  font-family: Poppins-Regular;
-  font-size: 14px;
+  font-family: Highlight;
+  font-size: 18px;
   color: #333333;
   line-height: 1.5;
   padding-left: 7px;
 }
 
 .input100 {
-  font-family: Poppins-Medium;
-  font-size: 16px;
+  font-family: Highlight;
+  font-size: 18px;
   color: #333333;
   line-height: 1.2;
 
@@ -427,7 +427,9 @@ iframe {
   transform: translateY(50%);
   right: 8px;
 }
-
+li ul a:hover{
+	color: blue;
+}
 .alert-validate:hover:before {
   visibility: visible;
   opacity: 1;
