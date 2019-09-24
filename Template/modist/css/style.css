@@ -7326,7 +7326,7 @@ h1, h2, h3, h4, h5,
     .ftco-navbar-light .navbar-nav {
       padding-bottom: 10px; } }
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-    font-size: 14px;
+    font-size: 18px;
 
 
     padding-top: 1.5rem;
@@ -7345,6 +7345,7 @@ h1, h2, h3, h4, h5,
         padding-top: .9rem;
         padding-bottom: .9rem;
         /*     the trang chu        */
+
         color: rgba(255, 255, 255, 0.7); }
         .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
           color: #fff; } }
