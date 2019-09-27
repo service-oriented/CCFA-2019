@@ -26,6 +26,7 @@ create table guest(
     accountId bigint,
     foreign key (accountId) references account (accountId)
 );
+alter table guest add column link varchar(125);
 create table product(
 	productId bigint auto_increment primary key,
     code varchar(25) unique not null,
