@@ -1,4 +1,4 @@
-package hudala.mvc.model.dao;
+package hudala.mvc.commom;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
