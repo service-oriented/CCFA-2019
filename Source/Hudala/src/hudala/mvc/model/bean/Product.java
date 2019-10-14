@@ -14,12 +14,10 @@ public class Product {
 	private Date createdDate;
 	private int createdBy;
 	private String keyword;
-	
-	public Product()
-	{
 		
+	public Product() {
+		super();
 	}
-	
 	public int getProductId() {
 		return productId;
 	}
@@ -80,8 +78,5 @@ public class Product {
 	public void setKeyword(String keyword) {
 		this.keyword = keyword;
 	}
-	
-	
-	
 	
 }

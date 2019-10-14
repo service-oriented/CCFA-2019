@@ -13,11 +13,9 @@ public class ConnectionPoolImpl implements ConnectionPool {
 	private String url;
 	private String user;
 	private String pass;
-	//Tạo đối tượng lưu trữ kết nối
 	public Stack<Connection> pool;
 	
 	public ConnectionPoolImpl() {
-		//Nạp trình điều khiển
 		this.drive = "com.mysql.jdbc.Driver";
 		try {
 			Class.forName(this.drive).newInstance();
@@ -25,13 +23,9 @@ public class ConnectionPoolImpl implements ConnectionPool {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//Xác định đường dẫn
-		this.url = "jdbc:mysql://localhost:3306/matbe_data";
-		//Xác định tài khoản mật khẩu
+		this.url = "jdbc:mysql://localhost:3306/ccfa?useSSL=false";
 		this.user = "root"; 
-		this.pass = "123456abc"; 
-		
-		//Khởi tạo đối tượng lưu trữ
+		this.pass = "123456"; 
 		this.pool = new Stack<Connection>();
 	}
 
@@ -49,7 +43,7 @@ public class ConnectionPoolImpl implements ConnectionPool {
 
 	@Override
 	public void releaseConnectionPool(Connection con, String ObjectName) {
-		// TODO Thu hoi ket noi
+		// TODO 
 		System.out.println(ObjectName + " has pushed a connect");
 		this.pool.push(con);
 	}
@@ -64,7 +58,6 @@ public class ConnectionPoolImpl implements ConnectionPool {
 	public static void main(String[] args) throws SQLException {
 		ConnectionPool connec = new ConnectionPoolImpl() ;
 		connec.getConnectionPool("hung");
-		
 	}
 	
 }

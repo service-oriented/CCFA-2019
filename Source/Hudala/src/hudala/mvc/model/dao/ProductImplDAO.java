@@ -2,7 +2,7 @@ package hudala.mvc.model.dao;
 
 import java.sql.ResultSet;
 
-import hudala.mvc.commom.BasicImpl;
+import hudala.mvc.common.BasicImpl;
 import hudala.mvc.model.bean.Product;
 import hudala.mvc.model.dao.ProductDAO;
 

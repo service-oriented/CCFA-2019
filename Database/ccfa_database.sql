@@ -46,6 +46,8 @@ create table image(
     productId bigint not null,
     foreign key (productId) references product(productId)
 );
+alter table guest add column image varchar(125);
+alter table guest add constraint foreign key (image) references image(imageID);
 create table historyView(
 	historyViewId bigint auto_increment primary key,
     guestId bigint not null,
@@ -83,5 +85,8 @@ create table api(
     url varchar(125) not null,
     status bit not null default 1 -- mac dinh api dang hoat dong
 );
-
+-- update data
+insert into account(username,password,status,role) value ('admin','123456',1,1);
+insert into guest(fullName,birth,gender,job,email,phone,link,accountId)
+ value("Pham Van Dai","1998-11-26",1,"Student","phamdaiyb98@gmail.com","0325808383","http://www.facebook.com/phamdaiyb98",1);
 
