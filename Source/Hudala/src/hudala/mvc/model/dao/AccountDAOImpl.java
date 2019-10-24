@@ -23,22 +23,4 @@ public class AccountDAOImpl extends BasicImpl implements AccountDAO{
 		return null;
 	}
 
-	@Override
-	public boolean insertAccount() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean updateAccount() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean deleteAccount() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
 }

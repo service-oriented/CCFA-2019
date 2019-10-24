@@ -4,9 +4,20 @@ import java.util.Date;
 
 public class Guest extends User{
 
+	public Guest(String fullName, Date birth, String image, boolean gender, String phone, String email, String job,
+			String link) {
+		super(fullName, birth, image, gender, phone, email, job, link);
+		// TODO Auto-generated constructor stub
+	}
 	private long guestId;
 	public long getGuestId() {
 		return guestId;
+	}
+	@Override
+	public String toString() {
+		return "Guest [guestId=" + guestId + ", weight=" + weight + ", height=" + height + ", body=" + body
+				+ ", hairColor=" + hairColor + ", skinColor=" + skinColor + ", lipThickness=" + lipThickness
+				+ ", faceShape=" + faceShape + ", favorite=" + favorite + ", accountId=" + accountId + "]";
 	}
 	public void setGuestId(long guestId) {
 		this.guestId = guestId;
@@ -16,21 +27,6 @@ public class Guest extends User{
 	}
 	public void setWeight(float weight) {
 		this.weight = weight;
-	}
-	public Guest(String fullName, Date birth, boolean gender, String phone, String email, String job, String link,
-			long guestId, float weight, float height, String body, String hairColor, String skinColor,
-			String lipThickness, String faceShape, String favorite, long accountId) {
-		super(fullName, birth, gender, phone, email, job, link);
-		this.guestId = guestId;
-		this.weight = weight;
-		this.height = height;
-		this.body = body;
-		this.hairColor = hairColor;
-		this.skinColor = skinColor;
-		this.lipThickness = lipThickness;
-		this.faceShape = faceShape;
-		this.favorite = favorite;
-		this.accountId = accountId;
 	}
 	public float getHeight() {
 		return height;

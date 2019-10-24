@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import hudala.mvc.model.bean.Account;
 import hudala.mvc.model.dao.ConnectionPool;
 import hudala.mvc.model.service.AccountService;
+import hudala.mvc.util.MD5;
 
 @WebServlet("/admin")
 public class LoginController extends HttpServlet {
@@ -30,7 +31,7 @@ public class LoginController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String username = req.getParameter("username");
-		String password = req.getParameter("password");
+		String password = MD5.encode(req.getParameter("password"));// ma hoa mat khau
 		ConnectionPool cp = (ConnectionPool) getServletContext().getAttribute("CPool");
 		AccountService accountService = new AccountService(cp);
 		if (cp == null) {

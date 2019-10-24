@@ -57,7 +57,7 @@
 						<%
 							String status = request.getParameter("login");
 							if("failure".equals(status)){
-								out.print("<div><p style=\"font-size: 30px; color: #DF0029\">Đăng nhập thất bại</p></div>");
+								out.print("<div><p style=\"font-size: 25px; color: #DF0029\">Đăng nhập thất bại</p></div>");
 							}
 						%>
 						<div class="clearfix"></div>

@@ -3,22 +3,32 @@ package hudala.mvc.dto;
 import java.util.List;
 
 public class MenuDto {
-	private String linkImageAdminProfile;
+	
+	private String linkImage;
+	@Override
+	public String toString() {
+		return "MenuDto [linkImage=" + linkImage + ", adminName=" + adminName + ", messageCounter=" + messageCounter
+				+ ", feedBack=" + feedBack + "]";
+	}
 	private String adminName;
 	private int messageCounter;
-	private List<InboxDto> feedBackTop3;
-	public MenuDto(String linkImageAdminProfile, String adminName, int messageCounter, List<InboxDto> feedBackTop3) {
+	private List<InboxDto> feedBack;
+	
+	public MenuDto(String linkImage, String adminName, int messageCounter, List<InboxDto> feedBack) {
 		super();
-		this.linkImageAdminProfile = linkImageAdminProfile;
+		this.linkImage = linkImage;
 		this.adminName = adminName;
 		this.messageCounter = messageCounter;
-		this.feedBackTop3 = feedBackTop3;
+		this.feedBack = feedBack;
 	}
-	public String getLinkImageAdminProfile() {
-		return linkImageAdminProfile;
+	public String getLinkImage() {
+		return linkImage;
 	}
-	public void setLinkImageAdminProfile(String linkImageAdminProfile) {
-		this.linkImageAdminProfile = linkImageAdminProfile;
+	public void setLinkImage(String linkImage) {
+		this.linkImage = linkImage;
+	}
+	public void setFeedBack(List<InboxDto> feedBack) {
+		this.feedBack = feedBack;
 	}
 	public String getAdminName() {
 		return adminName;
@@ -32,10 +42,10 @@ public class MenuDto {
 	public void setMessageCounter(int messageCounter) {
 		this.messageCounter = messageCounter;
 	}
-	public List<InboxDto> getFeedBackTop3() {
-		return feedBackTop3;
+	public List<InboxDto> getFeedBack() {
+		return feedBack;
 	}
-	public void setFeedBackTop3(List<InboxDto> feedBackTop3) {
-		this.feedBackTop3 = feedBackTop3;
+	public void setfeedBack(List<InboxDto> feedBack) {
+		this.feedBack = feedBack;
 	} 
 }
