@@ -1,6 +1,7 @@
 package hudala.mvc.controller.admin;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,11 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import hudala.mvc.dto.MenuDto;
+import hudala.mvc.model.bean.Account;
 import hudala.mvc.model.dao.ConnectionPool;
 import hudala.mvc.model.service.AccountService;
 
-@WebServlet("/admin/home")
-public class HomeController extends HttpServlet {
+@WebServlet("/admin/account")
+public class AccountController extends HttpServlet {
 
 	/**
 	 * 
@@ -34,8 +36,10 @@ public class HomeController extends HttpServlet {
 				getServletContext().setAttribute("CPool", accountService.getCP());
 			}
 			MenuDto menu = MenuController.getMenu(cp);
+			List<Account> listUser = accountService.getAllUserAccount();
 			req.setAttribute("menu", menu);
-			RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/admin/home.jsp");
+			req.setAttribute("listUser", listUser);
+			RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/admin/account.jsp");
 			requestDispatcher.forward(req, resp);
 		}
 	}

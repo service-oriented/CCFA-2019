@@ -261,13 +261,24 @@
         <!-- Bootstrap -->
         <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
         <!-- Datatables -->
-        <script>
-            $(document).ready(function () {
-                $(".view").click(function () {
-                    alert("View Info!");
-                });
-            });
-        </script>
+	<script>
+		$(document).ready(function() {
+			var table = $('#datatable-responsive').DataTable();
+			$(".view").click(function() {
+				var data = table.row( $(this).parents('tr') ).data();
+		        alert( data[0] +"'s salary is: "+ data[1] );
+				alert("View clicked!");
+			});
+			 
+// 			$('#datatable-responsive tbody').on( 'click', 'tr', function () {
+// 			    console.log( table.row( this ).data() );
+// 			} );
+// 			$('#datatable-responsive tbody').on( 'click', 'button', function () {
+// 		        var data = table.row( $(this).parents('tr') ).data();
+// 		        alert( data[0] +"'s salary is: "+ data[1] );
+// 		    } );
+		});
+	</script>
         <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
         <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
         <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>

@@ -1,15 +1,27 @@
-.center{
-    text-align: center;
+.center {
+	text-align: center;
 }
-#gender{
-    margin-bottom: 10px;
+
+#gender {
+	margin-bottom: 10px;
 }
-.required{
-    color: red;
+
+.required {
+	color: red;
 }
-.date{
-    padding: 0px 10px;
+
+.date {
+	padding: 0px 10px;
 }
-#update-data{
-    margin-top: 150px;
+
+#update-data {
+	margin-top: 150px;
+}
+
+.hide {
+	display: none;
+}
+
+.user-info {
+	 color: red;
 }

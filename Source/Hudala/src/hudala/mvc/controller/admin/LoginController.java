@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import hudala.mvc.model.bean.Account;
 import hudala.mvc.model.dao.ConnectionPool;
@@ -39,6 +40,8 @@ public class LoginController extends HttpServlet {
 		}
 		Account account = accountService.getAdminAccount();
 		if(account.getUsername().equals(username) && account.getPassword().equals(password)) {
+			HttpSession session = req.getSession();
+			session.setAttribute("username", username);
 			resp.sendRedirect("/admin/home");
 		}else {
 			resp.sendRedirect("/admin?login=failure");
