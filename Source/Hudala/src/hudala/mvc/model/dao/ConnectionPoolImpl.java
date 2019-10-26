@@ -25,7 +25,7 @@ public class ConnectionPoolImpl implements ConnectionPool {
 		}
 		this.url = "jdbc:mysql://localhost:3306/ccfa?useSSL=false";
 		this.user = "root"; 
-		this.pass = "123456"; 
+		this.pass = "Hoabingan"; 
 		this.pool = new Stack<Connection>();
 	}
 

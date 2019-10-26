@@ -75,11 +75,11 @@ public class BasicImpl implements Basic {
 	}
 
 	@Override
-	public ResultSet get(String sql, int value) {
+	public ResultSet get(String sql, long value) {
 		try {
 			PreparedStatement pre =(PreparedStatement) this.con.prepareStatement(sql);
 			if(value > 0) {
-				pre.setInt(1, value);
+				pre.setLong(1, value);
 			}
 			return pre.executeQuery();
 		} catch (SQLException e) {
@@ -194,5 +194,24 @@ public class BasicImpl implements Basic {
 			e.printStackTrace();
 		}
 		return false;
+	}
+	@Override
+	public ResultSet get(String sql, String username, String password, boolean status) {
+		try {
+			PreparedStatement pre = (PreparedStatement) this.con.prepareStatement(sql);
+			pre.setString(1, username);
+			pre.setString(2, password);
+			pre.setBoolean(3, status);
+			return pre.executeQuery();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			try {
+				this.con.rollback();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+		}
+		return null;
 	}
 }
