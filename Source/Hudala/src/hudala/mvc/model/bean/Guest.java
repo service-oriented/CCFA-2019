@@ -10,6 +10,16 @@ public class Guest extends User{
 		// TODO Auto-generated constructor stub
 	}
 	private long guestId;
+	private float weight;
+	private float height;
+	private String body;
+	private String hairColor;
+	private String skinColor;
+	private String lipThickness;
+	private String faceShape;
+	private String favorite;
+	private long accountId;
+	private Account account;
 	public long getGuestId() {
 		return guestId;
 	}
@@ -18,6 +28,26 @@ public class Guest extends User{
 		return "Guest [guestId=" + guestId + ", weight=" + weight + ", height=" + height + ", body=" + body
 				+ ", hairColor=" + hairColor + ", skinColor=" + skinColor + ", lipThickness=" + lipThickness
 				+ ", faceShape=" + faceShape + ", favorite=" + favorite + ", accountId=" + accountId + "]";
+	}
+	
+	public Guest(String fullName, Date birth, String image, boolean gender, String phone, String email, String link,
+			long guestId, float weight, float height, String body, String hairColor, String skinColor,
+			String lipThickness, String faceShape, String favorite, long accountId) {
+		super(fullName, birth, image, gender, phone, email, link);
+		this.guestId = guestId;
+		this.weight = weight;
+		this.height = height;
+		this.body = body;
+		this.hairColor = hairColor;
+		this.skinColor = skinColor;
+		this.lipThickness = lipThickness;
+		this.faceShape = faceShape;
+		this.favorite = favorite;
+		this.accountId = accountId;
+	}
+	
+	public Guest(String fullName, Date birth, String image, boolean gender, String phone, String email, String link) {
+		super(fullName, birth, image, gender, phone, email, link);
 	}
 	public void setGuestId(long guestId) {
 		this.guestId = guestId;
@@ -76,13 +106,11 @@ public class Guest extends User{
 	public void setAccountId(long accountId) {
 		this.accountId = accountId;
 	}
-	private float weight;
-	private float height;
-	private String body;
-	private String hairColor;
-	private String skinColor;
-	private String lipThickness;
-	private String faceShape;
-	private String favorite;
-	private long accountId;
+	public Account getAccount() {
+		return account;
+	}
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+ 
 }

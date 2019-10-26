@@ -5,18 +5,25 @@ import java.util.Date;
 public class User {
 	protected String fullName;
 	protected Date birth;
+	protected String image;
+	protected boolean gender;
+	protected String phone;
+	protected String email;
+	protected String job;
+	protected String link;
 	@Override
 	public String toString() {
 		return "User [fullName=" + fullName + ", birth=" + birth + ", image=" + image + ", gender=" + gender
 				+ ", phone=" + phone + ", email=" + email + ", link=" + link + "]";
 	}
+	
 	public String getImage() {
 		return image;
 	}
 	public void setImage(String image) {
 		this.image = image;
 	}
-	protected String image;
+	
 	public String getFullName() {
 		return fullName;
 	}
@@ -30,6 +37,7 @@ public class User {
 		this.email = email;
 		this.link = link;
 	}
+	
 	public User(String fullName, Date birth, String image, boolean gender, String phone, String email, String job,
 			String link) {
 		super();
@@ -82,9 +90,5 @@ public class User {
 	public void setLink(String link) {
 		this.link = link;
 	}
-	protected boolean gender;
-	protected String phone;
-	protected String email;
-	protected String job;
-	protected String link;
+	
 }
