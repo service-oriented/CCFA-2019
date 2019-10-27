@@ -31,9 +31,9 @@ public class AccountDAOImpl extends BasicImpl implements AccountDAO{
 	}
 
 	@Override
-	public ResultSet checkAccount(String username, String password, boolean status) {
-		String sql = "SELECT * FROM account where username=? AND password=? AND status=?";		
-		return this.get(sql, username,password,status);
+	public ResultSet checkAccount(String username, String password, boolean status,boolean role ) {
+		String sql = "SELECT * FROM account where username=? AND password=? AND status=? AND role=?";		
+		return this.get(sql, username,password,status,role);
 	}
 
 	@Override

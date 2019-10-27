@@ -17,6 +17,6 @@ public interface Basic extends ShareControl{
 	public ResultSet[] gets(String[] sql);
 	public ResultSet get(String sql, String value);	
 	public boolean exist(String sql, String user);	
-	public ResultSet get(String sql, String username, String password, boolean status);
+	public ResultSet get(String sql, String username, String password, boolean status,boolean role);
 
 }

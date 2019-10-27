@@ -50,7 +50,7 @@ public class GuestDAOImpl extends BasicImpl implements GuestDAO{
 		
 		String sql="UPDATE guest SET fullName=?, birth =?,image=?, gender=?,  weight=?, height=?, "
 				+ "job=?, body=?, phone=?, "
-				+ "email=?,link=?, hairColor=?,skinColor=?,lipThickness=?,faceShape=?, favorite=? where accountId=? ";
+				+ "email=?,link=?, hairColor=?,skinColor=?,lip_thickness=?,faceShape=?, favorite=? where accountId=? ";
 		try {
 			PreparedStatement pre=this.con.prepareStatement(sql);
 			pre.setString(1,guest.getFullName());

@@ -196,12 +196,13 @@ public class BasicImpl implements Basic {
 		return false;
 	}
 	@Override
-	public ResultSet get(String sql, String username, String password, boolean status) {
+	public ResultSet get(String sql, String username, String password, boolean status,boolean role) {
 		try {
 			PreparedStatement pre = (PreparedStatement) this.con.prepareStatement(sql);
 			pre.setString(1, username);
 			pre.setString(2, password);
 			pre.setBoolean(3, status);
+			pre.setBoolean(4, role);
 			return pre.executeQuery();
 			
 		} catch (SQLException e) {

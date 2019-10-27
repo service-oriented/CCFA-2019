@@ -50,11 +50,11 @@ public class AccountService {
 	
 	//THAO-TAC-DANG-NHAP
 		//kiem tra xem tai khoan da ton tai chua
-		public boolean checkAccount(String username, String password, boolean status) {		
+		public boolean checkAccount(String username, String password, boolean status,boolean role) {		
 			
 				ArrayList<Account> items = new ArrayList<Account>();
 				Account item = null;
-				ResultSet rs = this.accountDao.checkAccount(username, password, status);		
+				ResultSet rs = this.accountDao.checkAccount(username, password, status,role);		
 				if(rs!=null) {
 					try {
 						while(rs.next()) {

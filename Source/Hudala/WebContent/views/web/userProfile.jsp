@@ -33,12 +33,23 @@
   </div>  
 </div>
 
+<!-- File Button --> 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Upload photo">Ảnh</label>
+  <div class="col-md-4">
+  	<c:if test="${not empty GUEST.image}">  
+    <input id="Upload photo" name="Upload photo" value="${GUEST.image}"  class="input-file"  type="file">
+    </c:if>
+     <c:if test="${ empty GUEST.image}">  
+      <input id="Upload photo" name="Upload photo"   class="input-file"  type="file">
+     </c:if>
+  </div>
+</div>
 
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="Date Of Birth">Ngày sinh</label>  
   <div class="col-md-4">
-
   <div class="input-group">
        <div class="input-group-addon">
      <i class="fa fa-birthday-cake"></i>
@@ -61,7 +72,7 @@
   <label class="col-md-4 control-label" for="Gender">Giới tính</label>
   <div class="col-md-4"> 
   <c:if test="${not empty GUEST.gender}">  
-    <c:if test="${GUEST.gender=='nam'}">
+    <c:if test="${GUEST.gender==true}">
 	    <label class="radio-inline" for="Gender-0">
 	      <input type="radio" name="gender" id="gender-0" value="1" checked="checked">
 	      Nam
@@ -71,7 +82,7 @@
 	      Nữ
 	    </label>  
     </c:if>    
-    <c:if test="${GUEST.gender=='nữ'}">
+    <c:if test="${GUEST.gender==false}">
      <label class="radio-inline" for="Gender-0">
 		      <input type="radio" name="gender" id="gender-0" value="1" >
 		      Nam     
@@ -138,7 +149,25 @@
       </div>  
   </div>
 </div>
-
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="License No.">Facebook</label>  
+  <div class="col-md-4">
+  <div class="input-group">
+       <div class="input-group-addon">
+     <i class="fa fa-sticky-note-o"></i>        
+       </div>
+       <c:if test="${not empty GUEST.link}">    
+	<input id="link" name="link" type="text" value="${GUEST.link }" class="form-control input-md">
+	</c:if>
+	  <c:if test="${ empty GUEST.link}">
+	  <input id="link" name="link" type="text"	placeholder="Facebook" class="form-control input-md">
+	  </c:if>
+	</div>
+ 
+    
+  </div>
+</div>
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="Skills">Công việc</label>  
@@ -280,10 +309,10 @@
 <div class="form-group">
   <label class="col-md-4 control-label col-xs-12" for="Permanent Address">Kiểu môi</label>  
   <div class="col-md-2  col-xs-4">
-  <c:if test="${not empty GUEST.lip_thickness}">  
-  <input id="lipThickness" name="lipThickness" type="text" value="${GUEST.lip_thickness }" class="form-control input-md ">
+  <c:if test="${not empty GUEST.lipThickness}">  
+  <input id="lipThickness" name="lipThickness" type="text" value="${GUEST.lipThickness }" class="form-control input-md ">
   </c:if>
-  <c:if test="${ empty GUEST.lip_thickness}">  
+  <c:if test="${ empty GUEST.lipThickness}">  
    <input id="lipThickness" name="lipThickness" type="text" placeholder="Kiểu môi" class="form-control input-md ">
   
        </c:if>
@@ -306,10 +335,9 @@
   <input type="hidden" value="userProfile" name="action"/>  
 	<button class="btn btn-success" type="submit" ><span class="glyphicon glyphicon-thumbs-up"></span> Cập nhật
 	</button> 
- <!--   <input type="hidden" value="dropUserProfile" name="action"/>  
-	<button class="btn btn-success" type="submit" ><span class="glyphicon glyphicon-remove-sign"></span>
-	</button>-->	
+   <a href='<c:url value="/thoat?action=logoutUser"/>' class="btn btn-danger" ><span class="glyphicon glyphicon-remove-sign"></span>Thoát</a>
        
+           
   </div>
 </div>
 
