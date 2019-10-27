@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 
@@ -10,23 +10,27 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="${pageContext.request.contextPath}/images/fashion.ico" type="images/ico" />
+<link rel="icon"
+	href="${pageContext.request.contextPath}/images/fashion.ico"
+	type="images/ico" />
 <title>Trang chủ</title>
 
 <!-- Bootstrap -->
 <link
 	href="${pageContext.request.contextPath}/templates/admin/vendors/bootstrap/dist/css/bootstrap.min.css"
-	rel="stylesheet"/>
+	rel="stylesheet" />
 <!-- Font Awesome -->
 <link
 	href="${pageContext.request.contextPath}/templates/admin/vendors/font-awesome/css/font-awesome.min.css"
-	rel="stylesheet"/>
+	rel="stylesheet" />
 <!-- NProgress -->
 <!-- Custom Theme Style -->
 <link
-	href="${pageContext.request.contextPath}/templates/admin/build/css/custom.min.css" rel="stylesheet"/>
+	href="${pageContext.request.contextPath}/templates/admin/build/css/custom.min.css"
+	rel="stylesheet" />
 <link
-	href="${pageContext.request.contextPath}/templates/admin/build/css/custom.css" rel="stylesheet"/>
+	href="${pageContext.request.contextPath}/templates/admin/build/css/custom.css"
+	rel="stylesheet" />
 </head>
 
 <body class="nav-md">
@@ -101,37 +105,9 @@
 	<!-- Bootstrap -->
 	<script
 		src="${pageContext.request.contextPath}/templates/admin/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-	<!-- FastClick -->
-	<script
-		src="<c:url value='/templates/admin/vendors/jquery-sparkline/dist/jquery.sparkline.min.js'/>"></script>
-	<!-- Flot -->
-	<script
-		src="<c:url value='/templates/admin/vendors/Flot/jquery.flot.js'/>"></script>
-	<!-- <script src="<c:url value='/templatess/admin/vendors/Flot/jquery.flot.pie.js'/>"></script> -->
-	<script
-		src="<c:url value='/templates/admin/vendors/Flot/jquery.flot.time.js'/>"></script>
-	<script
-		src="<c:url value='/templates/admin/vendors/Flot/jquery.flot.stack.js'/>"></script>
-	<script
-		src="<c:url value='/templates/admin/vendors/Flot/jquery.flot.resize.js'/>"></script>
-	<!-- Flot plugins -->
-	<script
-		src="<c:url value='/templates/admin/vendors/flot.orderbars/js/jquery.flot.orderBars.js'/>"></script>
-	<script
-		src="<c:url value='/templates/admin/vendors/flot-spline/js/jquery.flot.spline.min.js'/>"></script>
-	<script
-		src="<c:url value='/templates/admin/vendors/flot.curvedlines/curvedLines.js'/>"></script>
-	<!-- DateJS -->
-	<script
-		src="<c:url value='/templates/admin/vendors/DateJS/build/date.js'/>"></script>
-	<!-- bootstrap-daterangepicker -->
-	<script
-		src="<c:url value='/templates/admin/vendors/moment/min/moment.min.js'/>"></script>
-	<script
-		src="<c:url value='/templates/admin/vendors/bootstrap-daterangepicker/daterangepicker.js'/>"></script>
-
 	<!-- Custom Theme Scripts -->
-	<script src="${pageContext.request.contextPath}/templates/admin/build/js/custom.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/templates/admin/build/js/custom.min.js"></script>
 </body>
 
 </html>

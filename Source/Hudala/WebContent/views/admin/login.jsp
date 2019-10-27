@@ -56,8 +56,12 @@
 						</div>
 						<%
 							String status = request.getParameter("login");
-							if("failure".equals(status)){
+							if ("failure".equals(status)) {
 								out.print("<div><p style=\"font-size: 25px; color: #DF0029\">Đăng nhập thất bại</p></div>");
+							}
+							if ("false".equals(status)) {
+								session.removeAttribute("username");
+								session.invalidate();
 							}
 						%>
 						<div class="clearfix"></div>

@@ -20,14 +20,14 @@ public class AccountDAOImpl extends BasicImpl implements AccountDAO{
 
 	@Override
 	public ResultSet getAdminAccount() {
-		String sql = "select * from ccfa.account where role = ?;";
-		return this.get(sql, 1);
+		String sql = "select * from ccfa.account where role = ?";
+		return this.get(sql, 1);// tai khoan role = 1
 	}
 
 	@Override
 	public ResultSet getAllUserAccount() {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "select * from ccfa.account where role = 0";
+		return this.gets(sql);// tai khoan role = 0
 	}
 
 	@Override

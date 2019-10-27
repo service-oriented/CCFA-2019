@@ -6,6 +6,11 @@ public class Account {
 	private String username;
 	private String password;
 	private boolean role;
+	@Override
+	public String toString() {
+		return "Account [accountId=" + accountId + ", username=" + username + ", password=" + password + ", role="
+				+ role + ", status=" + status + "]";
+	}
 	private boolean status;
 	public long getAccountId() {
 		return accountId;
@@ -22,6 +27,12 @@ public class Account {
 		this.username = username;
 		this.password = password;
 		this.role = role;
+		this.status = status;
+	}
+	public Account(long accountId, String username, boolean status) {
+		super();
+		this.accountId = accountId;
+		this.username = username;
 		this.status = status;
 	}
 	public String getUsername() {
