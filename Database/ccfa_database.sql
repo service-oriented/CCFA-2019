@@ -82,11 +82,15 @@ create table favorite(
 );
 create table api(
 	apiId bigint auto_increment primary key,
-    url varchar(125) not null,
+    url varchar(125) not null,lip_thickness
     status bit not null default 1 -- mac dinh api dang hoat dong
 );
 -- update data
 insert into account(username,password,status,role) value ('admin','123456',1,1);
 insert into guest(fullName,birth,gender,job,email,phone,link,accountId)
  value("Pham Van Dai","1998-11-26",1,"Student","phamdaiyb98@gmail.com","0325808383","http://www.facebook.com/phamdaiyb98",1);
-
+;
+insert into account(username,password,status,role) value ('user','123456',1,0);
+insert into guest(fullName,birth,gender,job,email,phone,link,accountId)
+ value("Cao Thị Ngọc Lan","1998-10-2",0,"Student","ngoclan@gmail.com","0398154141","http://www.facebook.com/lancao",2);
+;

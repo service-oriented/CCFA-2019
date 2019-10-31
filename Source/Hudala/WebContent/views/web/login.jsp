@@ -14,7 +14,7 @@
 	<div class="limiter login a">
 
 		<div class="container-login100 "
-			style="background-image: url('templates/hudala/images/bg-01.jpg');">
+			style="background-image: url('images/bg-01.jpg');">
 
 			<div class="container-animation">
 				<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">

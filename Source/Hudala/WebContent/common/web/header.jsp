@@ -34,8 +34,7 @@
 						  <a class="dropdown-item" name="${ACCOUNT.username}" href='<c:url value="/taikhoanuser?action=taikhoanuser"/>'>Hồ sơ của tôi</a>          
 						  <a class="dropdown-item" id="menucaphai" href='<c:url value="/thoat?action=logout"/>'>Đăng xuất</a>
 						  </div>
-			 		 </li>	
-              		
+			 		 </li>	             		
               		
               	 </c:if>
             <c:if test="${empty ACCOUNT}">
