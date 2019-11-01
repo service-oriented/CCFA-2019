@@ -1,35 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- Meta, title, CSS, favicons, etc. -->
-<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon"
-	href="${pageContext.request.contextPath}/images/fashion.ico"
+<link rel="icon" href="<c:uri value='/images/fashion.ico'/>"
 	type="images/ico" />
 <title>Trang chủ</title>
 
 <!-- Bootstrap -->
 <link
-	href="${pageContext.request.contextPath}/templates/admin/vendors/bootstrap/dist/css/bootstrap.min.css"
+	href="<c:uri value='/templates/admin/vendors/bootstrap/dist/css/bootstrap.min.css'/>"
 	rel="stylesheet" />
 <!-- Font Awesome -->
 <link
-	href="${pageContext.request.contextPath}/templates/admin/vendors/font-awesome/css/font-awesome.min.css"
+	href="<c:uri value='/templates/admin/vendors/font-awesome/css/font-awesome.min.css'/>"
 	rel="stylesheet" />
 <!-- NProgress -->
 <!-- Custom Theme Style -->
 <link
-	href="${pageContext.request.contextPath}/templates/admin/build/css/custom.min.css"
+	href="<c:uri value='/templates/admin/build/css/custom.min.css'/>"
 	rel="stylesheet" />
 <link
-	href="${pageContext.request.contextPath}/templates/admin/build/css/custom.css"
+	href="<c:uri value='/templates/admin/build/css/custom.css'/>"
 	rel="stylesheet" />
 </head>
 
@@ -101,13 +99,13 @@
 
 	<!-- jQuery -->
 	<script
-		src="${pageContext.request.contextPath}/templates/admin/vendors/jquery/dist/jquery.min.js"></script>
+		src="<c:uri value='/templates/admin/vendors/jquery/dist/jquery.min.js'/>"></script>
 	<!-- Bootstrap -->
 	<script
-		src="${pageContext.request.contextPath}/templates/admin/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+		src="<c:uri value='/templates/admin/vendors/bootstrap/dist/js/bootstrap.min.js'/>"></script>
 	<!-- Custom Theme Scripts -->
 	<script
-		src="${pageContext.request.contextPath}/templates/admin/build/js/custom.min.js"></script>
+		src="<c:uri value='/templates/admin/build/js/custom.min.js'/>"></script>
 </body>
 
 </html>
