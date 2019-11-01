@@ -14,7 +14,7 @@
 		<div class="profile clearfix">
 			<div class="profile_pic">
 				<img
-					src="${pageContext.request.contextPath}/images/logo-haui-size.png"
+					src="<c:uri value='/images/logo-haui-size.png'/>"
 					alt="profile" class="img-circle profile_img">
 			</div>
 			<div class="profile_info">
@@ -81,7 +81,7 @@
 				<li class=""><a href="javascript:;"
 					class="user-profile dropdown-toggle" data-toggle="dropdown"
 					aria-expanded="false"> <img
-						src="${pageContext.request.contextPath}/images/logo-haui-size.png"
+						src="<c:uri value='/images/logo-haui-size.png'/>"
 						alt="profile">${menu.adminName} <span
 						class=" fa fa-angle-down"></span>
 				</a>

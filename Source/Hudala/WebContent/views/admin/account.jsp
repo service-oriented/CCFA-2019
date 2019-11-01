@@ -10,26 +10,23 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon"
-	href="${pageContext.request.contextPath}/images/fashion.ico"
+<link rel="icon" href="<c:uri value='/images/fashion.ico'/>"
 	type="images/ico" />
 <title>Quản lý tài khoản</title>
 
 <!-- Bootstrap -->
 <link
-	href="${pageContext.request.contextPath}/templates/admin/vendors/bootstrap/dist/css/bootstrap.min.css"
+	href="<c:uri value='/templates/admin/vendors/bootstrap/dist/css/bootstrap.min.css'/>"
 	rel="stylesheet" />
 <!-- Font Awesome -->
 <link
-	href="${pageContext.request.contextPath}/templates/admin/vendors/font-awesome/css/font-awesome.min.css"
+	href="<c:uri value='/templates/admin/vendors/font-awesome/css/font-awesome.min.css'/>"
 	rel="stylesheet" />
 
 <!-- Custom Theme Style -->
-<link
-	href="${pageContext.request.contextPath}/templates/admin/build/css/custom.min.css"
+<link href="<c:uri value='/templates/admin/build/css/custom.min.css'/>"
 	rel="stylesheet" />
-<link
-	href="${pageContext.request.contextPath}/templates/admin/build/css/custom.css"
+<link href="<c:uri value='/templates/admin/build/css/custom.css'/>"
 	rel="stylesheet" />
 </head>
 
@@ -113,10 +110,11 @@
 								<div class="form-group col-md-12 col-sm-12 col-xs-12"
 									style="text-align: center">
 									<img alt="User Profile" width="200px" height="200px"
-										src="${pageContext.request.contextPath}/images/logo-haui-size.png">
+										src="<c:uri value='/images/logo-haui-size.png'/>">
 								</div>
 								<div class="checkbox" style="text-align: center;">
-									<label style="margin-top: 10px;"> <input type="checkbox" > Cấm truy cập hệ thống
+									<label style="margin-top: 10px;"> <input
+										type="checkbox"> Cấm truy cập hệ thống
 									</label>
 								</div>
 							</div>
@@ -172,19 +170,19 @@
 
 	<!-- jQuery -->
 	<script
-		src="${pageContext.request.contextPath}/templates/admin/vendors/jquery/dist/jquery.min.js"></script>
+		src="<c:uri value='/templates/admin/vendors/jquery/dist/jquery.min.js'/>"></script>
 	<!-- Bootstrap -->
 	<script
-		src="${pageContext.request.contextPath}/templates/admin/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+		src="<c:uri value='/templates/admin/vendors/bootstrap/dist/js/bootstrap.min.js'/>"></script>
 	<!-- Custom Theme Scripts -->
 	<script
-		src="${pageContext.request.contextPath}/templates/admin/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+		src="<c:uri value='/templates/admin/vendors/datatables.net/js/jquery.dataTables.min.js'/>"></script>
 	<script
-		src="${pageContext.request.contextPath}/templates/admin/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+		src="<c:uri value='/templates/admin/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js'/>"></script>
 	<script
-		src="${pageContext.request.contextPath}/templates/admin/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+		src="<c:uri value='/templates/admin/vendors/datatables.net-responsive/js/dataTables.responsive.min.js'/>"></script>
 	<script
-		src="${pageContext.request.contextPath}/templates/admin/build/js/custom.min.js"></script>
+		src="<c:uri value='/templates/admin/build/js/custom.min.js'/>"></script>
 	<script>
 		$(document).ready(function() {
 			var table = $('#datatable-responsive').DataTable();
