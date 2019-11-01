@@ -57,7 +57,20 @@ public class AccountService {
 			try {
 				while(rs.next()) {
 					listUserAccount.add(new Account(rs.getLong("accountId"), rs.getString("username"), rs.getBoolean("status")));
-	//THAO-TAC-DANG-NHAP
+				}
+			}catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return listUserAccount;
+	}
+	
+	
+					
+					
+					
+					//THAO-TAC-DANG-NHAP
 		//kiem tra xem tai khoan da ton tai chua
 		public boolean checkAccount(String username, String password, boolean status,boolean role) {		
 			
@@ -103,10 +116,7 @@ public class AccountService {
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
-		}
-		return listUserAccount;
-	}
+			}			
 			return null;
 		}
 		

@@ -81,9 +81,9 @@
     	<dec:body/>
     </div>
 
-	<!--  footer 
+	<!--  footer--> 
 	<%@ include file="/common/web/footer.jsp" %>
-	 footer -->
+	 
 	
 	
    

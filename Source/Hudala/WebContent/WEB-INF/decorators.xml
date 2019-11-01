@@ -20,4 +20,7 @@
     <decorator name="userProfile" page="userProfile.jsp">
         <pattern>/taikhoanuser*</pattern>
     </decorator>
+     <decorator name="feedback" page="feedback.jsp">
+        <pattern>/phanhoi*</pattern>
+    </decorator>
 </decorators>

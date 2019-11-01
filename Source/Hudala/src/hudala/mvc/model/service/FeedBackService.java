@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import hudala.mvc.dto.InboxDto;
+import hudala.mvc.model.bean.Account;
+import hudala.mvc.model.bean.FeedBack;
 import hudala.mvc.model.dao.ConnectionPool;
 import hudala.mvc.model.dao.FeedBackDAO;
 import hudala.mvc.model.dao.FeedBackDAOImpl;
@@ -64,4 +66,13 @@ public class FeedBackService {
 		}
 		return counter;
 	}
+	
+	//them mot cau hoi
+			public boolean addFeedBack(FeedBack item) {
+								
+					return this.addFeedBack(item);		
+					
+			}
+	
+	
 }

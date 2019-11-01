@@ -13,7 +13,7 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="#" class="nav-link">Trang chủ <span class="sr-only">(current)</span></a>
+	          <li class="nav-item active"><a href='<c:url value="/trangchu"/>'class="nav-link">Trang chủ <span class="sr-only">(current)</span></a>
 	           </li>
 	          
 	          <li class="nav-item dropdown">
@@ -25,7 +25,7 @@
               </div>
             </li>
 	          <li class="nav-item"><a href="advisory.html" class="nav-link">Tư vấn</a></li>
-	          <li class="nav-item"><a href="feedback.html" class="nav-link">Phản hồi</a></li>
+	          <li class="nav-item"><a href='<c:url value="/phanhoi"/>'class="nav-link">Phản hồi</a></li>
 	           
 	          <c:if test="${not empty ACCOUNT}">    
  					<li class="nav-item dropdown">              		

@@ -1,13 +1,16 @@
 package hudala.mvc.model.bean;
 
 public class Message {
+	
+	protected String title;
+	protected String content;
+	
 	public Message(String title, String content) {
 		super();
 		this.title = title;
 		this.content = content;
 	}
-	protected String title;
-	protected String content;
+	
 	public String getTitle() {
 		return title;
 	}
