@@ -70,13 +70,26 @@
     [ Show pass ]*/
     var showPass = 0;
     $('.btn-show-pass').on('click', function(){
-        if(showPass == 0) {
+    	 if(showPass == 0) {
+             $(this).next('input').attr('type','text');
+             $(this).find('i').removeClass('zmdi-eye');
+             $(this).find('i').addClass('zmdi-eye-off');
+             showPass = 1;
+         }
+    	 else
+        if(showPass == 1) {
             $(this).next('input').attr('type','text');
             $(this).find('i').removeClass('zmdi-eye');
             $(this).find('i').addClass('zmdi-eye-off');
-            showPass = 1;
+            showPass = 2;
         }
-        else {
+        else if(showPass == 2){
+            $(this).next('input').attr('type','password');
+            $(this).find('i').addClass('zmdi-eye');
+            $(this).find('i').removeClass('zmdi-eye-off');
+            showPass = 3;
+        }
+        else if(showPass == 3){
             $(this).next('input').attr('type','password');
             $(this).find('i').addClass('zmdi-eye');
             $(this).find('i').removeClass('zmdi-eye-off');

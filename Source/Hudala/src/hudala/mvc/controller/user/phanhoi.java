@@ -18,9 +18,11 @@ import javax.servlet.http.HttpSession;
 
 import hudala.mvc.model.bean.Account;
 import hudala.mvc.model.bean.FeedBack;
+import hudala.mvc.model.bean.Guest;
 import hudala.mvc.model.dao.ConnectionPool;
 import hudala.mvc.model.dao.ConnectionPoolImpl;
 import hudala.mvc.model.service.FeedBackService;
+import hudala.mvc.model.service.GuestService;
 import hudala.mvc.util.SessionUtil;
 
 /**
@@ -40,6 +42,14 @@ public class phanhoi extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		Account account = new Account();
+		account = (Account) SessionUtil.getInstance().getValue(request, "ACCOUNT");
+		if(account!=null) {
+			Guest guest=new Guest(null, null, null, false, null, null, null);
+			guest= new GuestService(cp).getGuest(account.getAccountId()).get(0);
+			session.setAttribute("GUEST1", guest);
+		}
 		RequestDispatcher rd=request.getRequestDispatcher("/views/web/feedback.jsp");
 		rd.forward(request, response);
 		
@@ -49,7 +59,6 @@ public class phanhoi extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		
 		request.setCharacterEncoding("utf-8");
 		response.setCharacterEncoding("utf-8");
@@ -63,24 +72,26 @@ public class phanhoi extends HttpServlet {
 			response.sendRedirect(request.getContextPath()+"/phanhoi");
 		}
 		else {
+			accountId=account.getAccountId();
+			System.out.println("Tài khoản ID là:"+accountId);
 		if (action != null && action.equals("feedback")) {
-			String username=request.getParameter("username");
+			
 			String title=request.getParameter("title");
 			String content=request.getParameter("content");
 			FeedBackService feedBackService=new FeedBackService(cp);
+			
 			FeedBack feedback=new FeedBack(null,null);
 			feedback.setContent(content);
 			feedback.setTitle(title);
-			feedback.setSender(accountId);
+			feedback.setSender(accountId);			
 			feedback.setSentTime(new Timestamp(System.currentTimeMillis()));
 			
-			
-			
-				System.out.println("Thời gian: "+feedback.getSentTime());
+			System.out.println("Thời gian: "+feedback.getSentTime());
 			
 			feedBackService.addFeedBack(feedback);
 				
-				System.out.println("Them thanh cong");
+			System.out.println("Them thanh cong");
+			response.sendRedirect(request.getContextPath()+"/phanhoi");	
 		}
 		else {
 			System.out.println("Khong them duoc cau hoi");
