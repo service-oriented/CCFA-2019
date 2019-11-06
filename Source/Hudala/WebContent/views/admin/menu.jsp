@@ -15,6 +15,7 @@
 			<div class="profile_pic">
 				<img
 					src="<c:url value='/images/logo-haui-size.png'/>"
+					src="${pageContext.request.contextPath}/images/logo-haui-size.png"
 					alt="profile" class="img-circle profile_img">
 			</div>
 			<div class="profile_info">
