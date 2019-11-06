@@ -17,17 +17,17 @@
 <!-- Bootstrap -->
 <link
 	href="<c:url value='/templates/admin/vendors/bootstrap/dist/css/bootstrap.min.css'/>"
-	rel="stylesheet" />
+	rel="stylesheet" type="text/css">
 <!-- Font Awesome -->
 <link
 	href="<c:url value='/templates/admin/vendors/font-awesome/css/font-awesome.min.css'/>"
-	rel="stylesheet" />
+	rel="stylesheet" type="text/css">
 
 <!-- Custom Theme Style -->
 <link href="<c:url value='/templates/admin/build/css/custom.min.css'/>"
-	rel="stylesheet" />
+	rel="stylesheet" type="text/css">
 <link href="<c:url value='/templates/admin/build/css/custom.css'/>"
-	rel="stylesheet" />
+	rel="stylesheet" type="text/css">
 </head>
 
 <body class="nav-md">
@@ -189,66 +189,120 @@
 		src="<c:url value='/templates/admin/vendors/datatables.net-responsive/js/dataTables.responsive.min.js'/>"></script>
 	<script src="<c:url value='/templates/admin/build/js/custom.min.js'/>"></script>
 	<script>
-		$(document).ready(function() {
-			var table = $('#datatable-responsive').DataTable();
-			$(".view").click(function() {
-				var data = table.row($(this).parents('tr')).data();
-				var accountId = data[1];
-				var access = data[3];
-				switch (access) {
-				case '<input type="checkbox" checked="checked" disabled="">':
-					$("#allow").show();
-					$("#denied").hide();
-					break;
-				default:
-					$("#denied").show();
-					$("#allow").hide();
-				}
-				$.ajax({
-					type : "GET",
-					url : "/admin/api/user-info" + "?id=" + accountId,
-					success : function(guest) {
-						var urlSubmit = "/admin/account/change-status?id=" + guest.accountId;
-						$("#name").text(guest.fullName);
-						$("#birth").text(guest.birth);
-						if (guest.gender) {
-							$("#gender").text("Nam");
-						} else {
-							$("#gender").text("Nữ");
-						}
-						$("#job").text(guest.job);
-						$("#phone").text(guest.phone);
-						$("#email").text(guest.email);
-						$("#link").text(guest.link);
-						$("#link").attr("href", guest.link);
-						$("#change-status").attr("href", urlSubmit);
-					}
-				});
-				$("#view-modal").modal();
-			});
-			$("#allow-access").click(function() {
-				$("#allow").hide();
-				$("#denied").show();
-				$("#denied-access").prop('checked', true);
-				var href = $("#change-status").attr("href");
-				if(href.indexOf("&s=true") != -1 || href.indexOf("&s=false") != -1){
-				    href = href.replace("&s=true", "");
-				    href = href.replace("&s=false", "");
-				}
-				$("#change-status").attr("href", href + "&s=false");
-			});
-			$("#denied-access").click(function() {
-				$("#denied").hide();
-				$("#allow").show();
-				$("#allow-access").prop('checked', true);
-				var href = $("#change-status").attr("href");
-				if(href.indexOf("&s=true") != -1 || href.indexOf("&s=false") != -1){
-				    href = href.replace("&s=true", "");
-				    href = href.replace("&s=false", "");
-				}
-				$("#change-status").attr("href", href + "&s=true");
-			});
-		});
+		$(document)
+				.ready(
+						function() {
+							var table = $('#datatable-responsive').DataTable();
+							$(".view")
+									.click(
+											function() {
+												var data = table.row(
+														$(this).parents('tr'))
+														.data();
+												var accountId = data[1];
+												var access = data[3];
+												switch (access) {
+												case '<input type="checkbox" checked="checked" disabled="">':
+													$("#allow").show();
+													$("#denied").hide();
+													break;
+												default:
+													$("#denied").show();
+													$("#allow").hide();
+												}
+												$
+														.ajax({
+															type : "GET",
+															url : "/admin/api/user-info"
+																	+ "?id="
+																	+ accountId,
+															success : function(
+																	guest) {
+																var urlSubmit = "/admin/account/change-status?id="
+																		+ guest.accountId;
+																$("#name")
+																		.text(
+																				guest.fullName);
+																$("#birth")
+																		.text(
+																				guest.birth);
+																if (guest.gender) {
+																	$("#gender")
+																			.text(
+																					"Nam");
+																} else {
+																	$("#gender")
+																			.text(
+																					"Nữ");
+																}
+																$("#job")
+																		.text(
+																				guest.job);
+																$("#phone")
+																		.text(
+																				guest.phone);
+																$("#email")
+																		.text(
+																				guest.email);
+																$("#link")
+																		.text(
+																				guest.link);
+																$("#link")
+																		.attr(
+																				"href",
+																				guest.link);
+																$(
+																		"#change-status")
+																		.attr(
+																				"href",
+																				urlSubmit);
+															}
+														});
+												$("#view-modal").modal();
+											});
+							$("#allow-access")
+									.click(
+											function() {
+												$("#allow").hide();
+												$("#denied").show();
+												$("#denied-access").prop(
+														'checked', true);
+												var href = $("#change-status")
+														.attr("href");
+												if (href.indexOf("&s=true") != -1
+														|| href
+																.indexOf("&s=false") != -1) {
+													href = href.replace(
+															"&s=true", "");
+													href = href.replace(
+															"&s=false", "");
+												}
+												$("#change-status").attr(
+														"href",
+														href + "&s=false");
+											});
+							$("#denied-access")
+									.click(
+											function() {
+												$("#denied").hide();
+												$("#allow").show();
+												$("#allow-access").prop(
+														'checked', true);
+												var href = $("#change-status")
+														.attr("href");
+												if (href.indexOf("&s=true") != -1
+														|| href
+																.indexOf("&s=false") != -1) {
+													href = href.replace(
+															"&s=true", "");
+													href = href.replace(
+															"&s=false", "");
+												}
+												$("#change-status").attr(
+														"href",
+														href + "&s=true");
+											});
+						});
 	</script>
 </body>
 
