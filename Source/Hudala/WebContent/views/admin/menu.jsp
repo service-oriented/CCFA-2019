@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@include file="/common/taglib.jsp" %>
 <!-- COMMON FRAGMENT -->
 <div class="col-md-3 left_col">
 	<div class="left_col scroll-view">
@@ -14,7 +14,7 @@
 		<div class="profile clearfix">
 			<div class="profile_pic">
 				<img
-					src="<c:uri value='/images/logo-haui-size.png'/>"
+					src="<c:url value='/images/logo-haui-size.png'/>"
 					alt="profile" class="img-circle profile_img">
 			</div>
 			<div class="profile_info">
@@ -81,7 +81,7 @@
 				<li class=""><a href="javascript:;"
 					class="user-profile dropdown-toggle" data-toggle="dropdown"
 					aria-expanded="false"> <img
-						src="<c:uri value='/images/logo-haui-size.png'/>"
+						src="<c:url value='/images/logo-haui-size.png'/>"
 						alt="profile">${menu.adminName} <span
 						class=" fa fa-angle-down"></span>
 				</a>

@@ -33,12 +33,12 @@ public class GuestService {
 	}
 
 	public User getAdminInfo() {
-		User AdminInfo = null;
+		User adminInfo = null;
 		ResultSet rs = guestDAO.getAdminInfo();
 		if (rs != null) {
 			try {
 				if (rs.next()) {
-					AdminInfo = new User(rs.getString("fullName"), rs.getDate("birth"), rs.getString("image"),
+					adminInfo = new User(rs.getString("fullName"), rs.getDate("birth"), rs.getString("image"),
 							rs.getBoolean("gender"), rs.getString("phone"), rs.getString("email"),
 							rs.getString("link"));
 				}
@@ -47,7 +47,24 @@ public class GuestService {
 				e.printStackTrace();
 			}
 		}
-		return AdminInfo;
+		return adminInfo;
+	}
+
+	public Guest getUserInfo(long accountId) {
+		Guest userInfo = null;
+		ResultSet rs = guestDAO.getUserInfo(accountId);
+		try {
+			if (rs.next()) {
+				userInfo = new Guest(rs.getString("fullName"), rs.getDate("birth"), rs.getString("image"),
+						rs.getBoolean("gender"), rs.getString("phone"), rs.getString("email"), rs.getString("job"),
+						rs.getString("link"),rs.getLong("accountId"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return userInfo;
+
 	}
 
 	// them mot khach hang voi fullname a accountid
@@ -62,34 +79,34 @@ public class GuestService {
 	}
 
 	public int checkAccountId(long accountId) {
-			ArrayList<Guest> items = new ArrayList<Guest>();
-			Guest item = null;
-			ResultSet rs = this.guestDAO.getGuest(accountId);
-			if(rs!=null) {
-				try {
-					while(rs.next()) {
-						item = new Guest(null, null, null, true, null, null, null)	;	
-						item.setJob(null);						
-						item.setWeight(0);
-						item.setHeight(0);
-						item.setBody(null);
-						item.setHairColor(null);						
-						item.setSkinColor(null);
-						item.setLipThickness(null);
-						item.setFaceShape(null);
-						item.setFavorite(null);
-						item.setAccountId(rs.getLong("accountId"));					
-											
-						items.add(item);
-						
-					}
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+		ArrayList<Guest> items = new ArrayList<Guest>();
+		Guest item = null;
+		ResultSet rs = this.guestDAO.getGuest(accountId);
+		if (rs != null) {
+			try {
+				while (rs.next()) {
+					item = new Guest(null, null, null, true, null, null, null);
+					item.setJob(null);
+					item.setWeight(0);
+					item.setHeight(0);
+					item.setBody(null);
+					item.setHairColor(null);
+					item.setSkinColor(null);
+					item.setLipThickness(null);
+					item.setFaceShape(null);
+					item.setFavorite(null);
+					item.setAccountId(rs.getLong("accountId"));
+
+					items.add(item);
+
 				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-				return items.size();	
 		}
+		return items.size();
+	}
 
 	// lay thong tin cua khach hang
 	public ArrayList<Guest> getGuest(long accountId) {
@@ -99,7 +116,7 @@ public class GuestService {
 		if (rs != null) {
 			try {
 				while (rs.next()) {
-					item = new  Guest(null, null, null, true, null, null, null);
+					item = new Guest(null, null, null, true, null, null, null);
 					item.setGuestId(rs.getLong("guestId"));
 					item.setFullName(rs.getString("fullName"));
 					item.setBirth(rs.getTimestamp("birth"));

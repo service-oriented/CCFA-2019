@@ -1,12 +1,12 @@
 package hudala.mvc.model.dao;
 
 
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Stack;
 
 
-import com.mysql.jdbc.Connection;
 public class ConnectionPoolImpl implements ConnectionPool {
 
 	private String drive;
@@ -23,9 +23,9 @@ public class ConnectionPoolImpl implements ConnectionPool {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		this.url = "jdbc:mysql://localhost:3306/ccfa?useSSL=false";
+		this.url = "jdbc:mysql://127.0.0.1:3306/ccfa?useSSL=false";
 		this.user = "root"; 
-		this.pass = "Hoabingan"; 
+		this.pass = "123456"; 
 		this.pool = new Stack<Connection>();
 	}
 

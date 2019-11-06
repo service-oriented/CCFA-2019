@@ -23,7 +23,7 @@ public class BasicImpl implements Basic {
 			this.cp = cp;
 		}
 		try {
-			this.con = this.cp.getConnectionPool(this.objectName);
+			this.con = (Connection) this.cp.getConnectionPool(this.objectName);
 			if (this.con.getAutoCommit()) {
 				this.con.setAutoCommit(false);
 			}

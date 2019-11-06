@@ -10,6 +10,7 @@ public interface GuestDAO extends ShareControl{
 	
 	ResultSet getAdminInfo();
 	
+	ResultSet getUserInfo(long accountId);
 	
 	public boolean addGuest(Guest guest);
 	
