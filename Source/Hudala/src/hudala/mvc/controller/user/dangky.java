@@ -16,7 +16,6 @@ import hudala.mvc.model.dao.ConnectionPool;
 import hudala.mvc.model.dao.ConnectionPoolImpl;
 import hudala.mvc.model.service.AccountService;
 import hudala.mvc.model.service.GuestService;
-import hudala.mvc.util.MD5;
 
 
 /**
@@ -54,8 +53,8 @@ public class dangky extends HttpServlet {
 		response.setCharacterEncoding("utf-8");
 		String fullname=request.getParameter("fullname");
 		String username=request.getParameter("username");
-		String password = MD5.encode(request.getParameter("password"));
-		String password2 = MD5.encode(request.getParameter("password2"));		
+		String password=request.getParameter("password");
+		String password2=request.getParameter("password2");	
 		System.out.println(fullname);
 		System.out.println(username);
 		System.out.println(password);

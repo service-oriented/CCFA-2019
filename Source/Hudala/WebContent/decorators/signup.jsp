@@ -80,7 +80,7 @@
 <!--===============================================================================================-->
 	 <script  type="text/javascript" src="<c:url value='/templates/hudala/ js/loginmain.js' />"></script>
 
-<script  type="text/javascript" src="<c:url value='/templates/hudala/style/checksignup.js' />"></script>
+
 <!--------------------------------------------------------------------------------------------------->
 	<script type="text/javascript">
 		

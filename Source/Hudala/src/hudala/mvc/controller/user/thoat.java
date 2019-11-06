@@ -26,13 +26,9 @@ public class thoat extends HttpServlet {
 		String action = request.getParameter("action");
 		if (action != null && action.equals("logout")) {
 			SessionUtil.getInstance().removeValue(request, "ACCOUNT");
-			SessionUtil.getInstance().removeValue(request, "GUEST1");
-			SessionUtil.getInstance().removeValue(request, "GUEST");
-			SessionUtil.getInstance().removeValue(request, "message");
 			response.sendRedirect(request.getContextPath()+"/trangchu");
 		}
 		else if (action != null && action.equals("logoutUser")) {
-			SessionUtil.getInstance().removeValue(request, "message");
 			response.sendRedirect(request.getContextPath()+"/trangchu");
 		}
 	}

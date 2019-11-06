@@ -26,7 +26,11 @@
         <div class="row block-9">
           <div class="col-md-6 order-md-last d-flex">
             <form action="#" class="bg-white p-5 contact-form"  action="<c:url value='/phanhoi' />" id="feedback" method="post">
-                      
+           
+			
+              <div class="form-group">
+                <input type="text" class="form-control" name="username " placeholder="Tên đăng nhập">
+              </div>             
 			  <div class="form-group">
                 <textarea name="title" id="title" cols="30" rows="3" class="form-control" placeholder="Tiêu đề"></textarea>
               </div>
@@ -47,34 +51,19 @@
 					<li class="list-group-item text-right">
 						<div class="row" class="form-group">
 						<span style="padding-top: 11px;" class="col-md-5 pull-left"><strong class="">Tên tài khoản</strong></span>
-						<c:if test="${not empty GUEST1.fullName}">
-							<input type="text" class="col-md-6 form-control" value="${GUEST1.fullName}" disabled>
-						</c:if>
-						<c:if test="${ empty GUEST1.fullName}">
-							<input type="text" class="col-md-6 form-control" disabled>
-						</c:if>
+						<input type="text" class="col-md-5 form-control" placeholder="Lan Cao" disabled>
 						</div>
 					</li>
 					<li class="list-group-item text-right">
 						<div class="row" class="form-group">
 						<span style="padding-top: 11px;" class="col-md-5 pull-left"><strong class="">Email</strong></span>
-						<c:if test="${not empty GUEST1.email}">
-							<input type="text" class="col-md-6 form-control" value="${GUEST1.email}" disabled>
-						</c:if>
-						<c:if test="${ empty GUEST1.email}">
-							<input type="text" class="col-md-6 form-control"  disabled>
-						</c:if>
+						<input type="text" class="col-md-5 form-control" placeholder="ngoclan@gmail.com" disabled>
 						</div>
 					</li>
 					<li class="list-group-item text-right">
 						<div class="row" class="form-group">
 						<span style="padding-top: 11px;" class="col-md-5 pull-left"><strong class="">Số điện thoại</strong></span>
-						<c:if test="${not empty GUEST1.phone}">
-							<input type="text" class="col-md-6 form-control"  value="${GUEST1.phone}" disabled>
-						</c:if>
-						<c:if test="${ empty GUEST1.phone}">
-							<input type="text" class="col-md-6 form-control" disabled>
-						</c:if>
+						<input type="text" class="col-md-5 form-control" placeholder="0398154141" disabled>
 						</div>
 					</li>
 				</ul>
@@ -87,26 +76,26 @@
 					<li class="list-group-item text-right">
 						<div class="row" class="form-group">
 						<span style="padding-top: 11px;" class="col-md-5 pull-left"><strong class="">Lượt Shares</strong></span>
-						<input type="text" class="col-md-6 form-control" placeholder="32" disabled>
+						<input type="text" class="col-md-5 form-control" placeholder="32" disabled>
 						</div>
 					</li>
 					<li class="list-group-item text-right">
 						<div class="row" class="form-group">
 						<span style="padding-top: 11px;" class="col-md-5 pull-left"><strong class="">Lượt Like</strong></span> 
-						<input type="text" class="col-md-6 form-control" placeholder="17" disabled>
+						<input type="text" class="col-md-5 form-control" placeholder="17" disabled>
 						</div>
 					</li>
 					<li class="list-group-item text-right">
 						<div class="row" class="form-group">
 						<span style="padding-top: 11px;" class="col-md-5 pull-left"><strong class="">Lượt Post</strong></span> 
-						<input type="text" class="col-md-6 form-control" placeholder="3" disabled>
+						<input type="text" class="col-md-5 form-control" placeholder="3" disabled>
 						</div>
 					
 					</li>
 					<li class="list-group-item text-right">
 						<div class="row" class="form-group">
 						<span style="padding-top: 11px;" class="col-md-5 pull-left"><strong class="">Lượt Follower</strong></span> 
-						<input type="text" class="col-md-6 form-control" placeholder="3" disabled>
+						<input type="text" class="col-md-5 form-control" placeholder="3" disabled>
 						</div>
 					
 					</li>

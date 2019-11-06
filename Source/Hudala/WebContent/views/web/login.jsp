@@ -38,12 +38,7 @@
 								<span class="focus-input100" data-symbol="&#xf206;"></span>
 							
 						</div>
-						<br/>
-						<c:if test="${not empty message}">
-							<div class="alert alert-danger">
-									${message}
-							</div>
-						</c:if>
+
 						<div class="text-right p-t-8 p-b-31">
 							<a href="#"> Quên mật khẩu? </a>
 						</div>	

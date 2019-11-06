@@ -26,11 +26,11 @@
 									<div class="input-group-addon">
 										<i class="fa fa-user"> </i>
 									</div>
-									<c:if test="${not empty GUEST1.fullName}">
+									<c:if test="${not empty GUEST.fullName}">
 										<input id="fullname" name="fullName" type="text"
 											value="${GUEST.fullName}" class="form-control input-md">
 									</c:if>
-									<c:if test="${ empty GUEST1.fullName}">
+									<c:if test="${ empty GUEST.fullName}">
 										<input id="fullname" name="fullName" type="text"
 											placeholder="Họ tên" class="form-control input-md">
 									</c:if>

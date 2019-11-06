@@ -138,7 +138,7 @@ function checkValidLogin(fn){
 		message +="\nThiếu mật khẩu vào hệ thống.";
 		
 	}else{
-		if(userpass.length<6){
+		if(userpass.length<3){
 			validUserPass = false;
 			message += "\nMật khẩu không hợp lệ.";
 		}
@@ -163,93 +163,6 @@ function checkValidLogin(fn){
 		
 	//trả về kết quả
 	return validUserName && validUserPass;
-	
-}
-function checkValidSignup(fn){
-	var fullname   =fn.fullname.value;
-	var username = fn.username.value;
-	var userpass = fn.password.value;
-	var userpass2 = fn.password2.value;
-
-	
-	//biến xác nhận sự hợp lệ của giá trị
-	var validFullName = true;
-	var validUserName = true;
-	var validUserPass = true;
-
-	//biến ghi nhận thông báo
-	var message = "";
-	//kiem tra ten tai khoan
-	fullname=fullname.trim();
-	if(fullname == ""){
-		validFullName = false;
-		message = "Bạn chưa nhập tên tài khoản";
-		
-	}else if(username.length>50){
-		validFullName = false;
-			message = "Tên tài khoản quá dài. Cần nhỏ hơn 50 ký tự.";
-			
-		}
-	
-	//kiểm tra tên đăng nhập
-	username = username.trim();//cắt bỏ khoảng trống đầu và cuối
-	if(username == ""){
-		validUserName = false;
-		message = "Bạn chưa nhập tên đăng nhập";
-		
-	}else{
-		if(username.indexOf(" ")!=-1){
-			validUserName = false;
-			message = "Tên đăng nhập có dấu cách.";
-		}else if(username.length>30){
-			validUserName = false;
-			message = "Tên đăng nhập quá dài. Cần nhỏ hơn 30 ký tự.";
-			
-		}
-	}
-	
-	//kiểm tra mật khẩu
-	userpass = userpass.trim();
-	if(userpass == ""){
-		validUserPass = false;
-		message +="\nBạn chưa nhập mật khẩu.";
-		
-	}else{
-		if(userpass.length<6){
-			validUserPass = false;
-			message += "\nMật khẩu không hợp lệ.";
-		}
-			
-	}
-	//kiểm tra mật khẩu 2
-	userpass2 = userpass2.trim();
-	if(userpass2.equal(userpass)!=0){
-		validUserPass = false;
-		message += "\nXác nhận mật khẩu không chính xác";
-	}
-	
-	//Thông báo kết quả kiểm tra
-	if(message!=""){
-		//Hiển thị 
-		window.alert(message);
-		//di chuyển con trỏ vào vị trí lỗi
-		//theo thứ tự TRÁI-->PHẢI; TRÊN--->DƯỚI
-		if(!validFullName){
-			fn.email.focus();
-			fn.pass.select();
-		}
-		if(!validUserName){
-			fn.email.focus();
-			fn.pass.select();
-		}else if(!validUserPass){
-			fn.pass.focus();
-			fn.pass.select();
-		}
-			
-	}
-		
-	//trả về kết quả
-	return validUserName && validUserPass && validFullName;
 	
 	
 }

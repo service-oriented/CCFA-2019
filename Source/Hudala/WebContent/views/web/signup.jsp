@@ -9,7 +9,7 @@
 <body>
 	<div class="limiter login a">
 		
-					<div class="container-login100 " style="background-image: url('/images/bg-01.jpg');">
+					<div class="container-login100 " style="background-image: url('templates/hudala/images/bg-01.jpg');">
 		
 					<div class="container-animation" style="background-color: white">
 					<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
@@ -21,7 +21,7 @@
 	
 						<div class="wrap-input100 validate-input m-b-23" data-validate = "Ho va ten">
 							<span class="label-input100">Nhập họ tên</span>
-							<input class="input100" type="text" name="fullname" placeholder="Nhập tên tài khoản">
+							<input class="input100" type="text" name="fullname" placeholder="Nhập họ và tên">
 							<span class="focus-input100" data-symbol="&#xf206;"></span>
 						</div>					
 						<div class="wrap-input100 validate-input m-b-23" data-validate = "Tài khoản không hợp lệ">
@@ -51,7 +51,7 @@
 							<div class="wrap-login100-form-btn">
 								<div class="login100-form-bgbtn"></div>
 								<input type="hidden" value="login" name="action"/>
-								<button class="login100-form-btn" onclick="checkValidSignup(this.form)" type="submit">Đăng ký
+								<button class="login100-form-btn" type="submit">Đăng ký
 									</button>
 							</div>
 						</div>
@@ -94,6 +94,6 @@
 	
 
 	<div id="dropDownSelect1"></div>
-	<script  type="text/javascript" src="<c:url value='/templates/hudala/style/checksignup.js' />"></script>
+	
 </body>
 </html>
