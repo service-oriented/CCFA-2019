@@ -18,9 +18,11 @@ import javax.servlet.http.HttpSession;
 
 import hudala.mvc.model.bean.Account;
 import hudala.mvc.model.bean.FeedBack;
+import hudala.mvc.model.bean.Guest;
 import hudala.mvc.model.dao.ConnectionPool;
 import hudala.mvc.model.dao.ConnectionPoolImpl;
 import hudala.mvc.model.service.FeedBackService;
+import hudala.mvc.model.service.GuestService;
 import hudala.mvc.util.SessionUtil;
 
 /**
@@ -40,6 +42,16 @@ public class phanhoi extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		Account account = new Account();
+		account = (Account) SessionUtil.getInstance().getValue(request, "ACCOUNT");
+		
+		if(account!=null) {
+			Guest guest=new Guest(null, null, null, false, null, null, null);
+			guest= new GuestService(cp).getGuest(account.getAccountId()).get(0);
+			session.setAttribute("GUEST1", guest);
+		}
+		
 		RequestDispatcher rd=request.getRequestDispatcher("/views/web/feedback.jsp");
 		rd.forward(request, response);
 		
@@ -57,36 +69,38 @@ public class phanhoi extends HttpServlet {
 		HttpSession session = request.getSession();
 		Account account = new Account();
 		account = (Account) SessionUtil.getInstance().getValue(request, "ACCOUNT");
-		long accountId=0;
+		
+		String messError=null;
+		
 		if (account==null)	{
-			System.out.println("Ban chua dang nhap");
+			messError="Bạn chưa đăng nhập";
+			session.setAttribute("alert", "danger");
+			session.setAttribute("messError", messError);
 			response.sendRedirect(request.getContextPath()+"/phanhoi");
 		}
-		else {
-		if (action != null && action.equals("feedback")) {
-			String username=request.getParameter("username");
+		else if (action != null && action.equals("feedback")) {
+			
 			String title=request.getParameter("title");
 			String content=request.getParameter("content");
 			FeedBackService feedBackService=new FeedBackService(cp);
 			FeedBack feedback=new FeedBack(null,null);
 			feedback.setContent(content);
 			feedback.setTitle(title);
-			feedback.setSender(accountId);
-			feedback.setSentTime(new Timestamp(System.currentTimeMillis()));
-			
-			
-			
-				System.out.println("Thời gian: "+feedback.getSentTime());
-			
+			feedback.setSender(account.getAccountId());
+			feedback.setSentTime(new Timestamp(System.currentTimeMillis()));							
 			feedBackService.addFeedBack(feedback);
-				
-				System.out.println("Them thanh cong");
+			session.setAttribute("messError", "Câu hỏi của bạn đã ghi lại");
+			session.setAttribute("alert", "success");
+			response.sendRedirect(request.getContextPath()+"/phanhoi");
 		}
 		else {
-			System.out.println("Khong them duoc cau hoi");
+			session.setAttribute("alert", "danger");
+			session.setAttribute("messError", "Không thêm được câu hỏi");
+			SessionUtil.getInstance().removeValue(request, "messError");
+			response.sendRedirect(request.getContextPath()+"/phanhoi");
 			}
 		}
 	
-	}
+	
 
 }

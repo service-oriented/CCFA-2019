@@ -5,8 +5,6 @@
 <html>
 <head>
 <title>Đăng nhập</title>
-<script language="JavaScript" src="<c:url value='/templates/hudala/js/messageCheck.js ' />"></script>
-
 
 </head>
 <body>
@@ -38,16 +36,22 @@
 								<span class="focus-input100" data-symbol="&#xf206;"></span>
 							
 						</div>
-
+						<br/>
+						<br/>
+						<c:if test="${not empty message}">
+							<div class="alert alert-danger">
+									${message}
+							</div>
+						</c:if>	
 						<div class="text-right p-t-8 p-b-31">
 							<a href="#"> Quên mật khẩu? </a>
 						</div>	
-											
+										
 						<div class="container-login100-form-btn">
 							<div class="wrap-login100-form-btn">
 								<div class="login100-form-bgbtn"></div>
 								<input type="hidden" value="login" name="action"/>
-								<button class="login100-form-btn" type="submit" onclick="checkValidLogin(this.form)">Đăng nhập
+								<button class="login100-form-btn" type="submit" >Đăng nhập
 								</button>
 							</div>
 						</div>

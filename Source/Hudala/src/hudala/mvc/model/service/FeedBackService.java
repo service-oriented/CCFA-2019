@@ -70,7 +70,7 @@ public class FeedBackService {
 	//them mot cau hoi
 			public boolean addFeedBack(FeedBack item) {
 								
-					return this.addFeedBack(item);		
+				return this.feedBackDAO.addFeedBack(item);
 					
 			}
 	

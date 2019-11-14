@@ -16,6 +16,8 @@ import hudala.mvc.model.dao.ConnectionPool;
 import hudala.mvc.model.dao.ConnectionPoolImpl;
 import hudala.mvc.model.service.AccountService;
 import hudala.mvc.model.service.GuestService;
+import hudala.mvc.util.MD5;
+import hudala.mvc.util.SessionUtil;
 
 
 /**
@@ -53,32 +55,39 @@ public class dangky extends HttpServlet {
 		response.setCharacterEncoding("utf-8");
 		String fullname=request.getParameter("fullname");
 		String username=request.getParameter("username");
-		String password=request.getParameter("password");
-		String password2=request.getParameter("password2");	
-		System.out.println(fullname);
-		System.out.println(username);
-		System.out.println(password);
-		System.out.println(password2);
+		String password=MD5.encode(request.getParameter("password"));
+		String password2=MD5.encode(request.getParameter("password2"));	
+		
+		HttpSession session = request.getSession();
 		AccountService accountmodel=new AccountService(cp);
 		GuestService guestmodel=new GuestService(cp);
 		Account account=new Account();
 		Guest guest=new Guest(null, null, null, true, null, null, null)	;	
 		
-		if(accountmodel.checkUsername(username)==true) {
-			System.out.println("Ten dang nhap da ton tai");
+		if(fullname==""||username==""||password=="") {
+			session.setAttribute("messSign","Một trường dữ liệu còn trống");
+			response.sendRedirect(request.getContextPath()+"/dangky?action=signup");
+		}
+		
+		else if(username.indexOf(" ")!=-1)
+		{
+			session.setAttribute("messSign", "Tên đăng nhập có dấu cách");
 			response.sendRedirect(request.getContextPath()+"/dangky?action=signup");
 		}
 		else if(password.compareTo(password2)!=0) {
-			System.out.println("Mat khau khong chinh xac");
+			session.setAttribute("messSign", "Mật khẩu không chính xác");
 			response.sendRedirect(request.getContextPath()+"/dangky?action=signup");
 		}
+		else if(accountmodel.checkUsername(username)==true) {
+			session.setAttribute("messSign","Tên đăng nhập đã tồn tại");
+			response.sendRedirect(request.getContextPath()+"/dangky?action=signup");
+		}		
 		else {			
 			account.setUsername(username);
 			account.setPassword(password);
 			account.setStatus(true);
 			account.setRole(false);												
 			if(accountmodel.addAccount(account)) {
-				System.out.println("Them account thanh cong");
 				long accountId=accountmodel.getAccountId(username, password);
 				if(accountId!=0)
 				{
@@ -86,13 +95,16 @@ public class dangky extends HttpServlet {
 					guest.setAccountId(accountId);
 					boolean checkGuest=guestmodel.addGuest(guest);
 					if(checkGuest==true) {
-						HttpSession session=request.getSession();
 						session.setAttribute("ACCOUNT", account);
+						SessionUtil.getInstance().removeValue(request, "messSign");
 						response.sendRedirect(request.getContextPath()+"/dang-nhap?action=login");
 					}
 					else response.sendRedirect(request.getContextPath()+"/dangky?action=signup");
 				}			
-				else System.out.println("Không them duoc khach hang do da ton tai");
+				else {
+					session.setAttribute("messSign","Khách hàng đã tồn tại");
+					response.sendRedirect(request.getContextPath()+"/dangky?action=signup");
+				}
 			}		
 		
 		}					

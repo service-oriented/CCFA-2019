@@ -17,6 +17,7 @@ import hudala.mvc.model.bean.Account;
 import hudala.mvc.model.dao.ConnectionPool;
 import hudala.mvc.model.dao.ConnectionPoolImpl;
 import hudala.mvc.model.service.AccountService;
+import hudala.mvc.util.MD5;
 import hudala.mvc.util.SessionUtil;
 
 /**
@@ -31,20 +32,11 @@ public class dangnhap extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	@SuppressWarnings("deprecation")
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getParameter("action");//chi khi dang nhap moi co
-		if (action != null && action.equals("login")) {
-			String alert = request.getParameter("alert");
-			String message = request.getParameter("message");
-			if (message != null && alert != null) {
-				request.setAttribute("message",message);
-				request.setAttribute("alert", alert);
-			}
+		if (action != null && action.equals("login")) {			
 			RequestDispatcher rd = request.getRequestDispatcher("/views/web/login.jsp");
-			rd.forward(request, response);
-		}else if (action != null && action.equals("signup")) {		
-			RequestDispatcher rd = request.getRequestDispatcher("/views/web/signup.jsp");
 			rd.forward(request, response);
 		}
 		 else {			
@@ -57,22 +49,33 @@ public class dangnhap extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String username=request.getParameter("username");
-		String password=request.getParameter("password");	
-		Account account =new AccountService(cp).getAccount(username, password);		
-		System.out.println(account);
+		String password=MD5.encode(request.getParameter("password"));	
+		HttpSession session=request.getSession();
+		System.out.println(username+" "+ password);
 		
-		if(new AccountService(cp).checkAccount(username, password, true,false)) {
 		
-			HttpSession session=request.getSession();
-			session.setAttribute("ACCOUNT", account);
-			response.sendRedirect(request.getContextPath()+"/trangchu");
-			//response.sendRedirect("/views/web/home.jsp");
+		if(username=="") {
+			session.setAttribute("message", "Bạn chưa nhập tên đăng nhập");
+			response.sendRedirect(request.getContextPath()+"/dang-nhap?action=login");
 		}
-		else {
-			System.out.println("Loi dang nhap, dang nhap lai");
-			HttpSession session=request.getSession();
-			session.setAttribute("message", "Tên đăng nhập hoặc mật khẩu không hợp lệ");
-			session.setAttribute("alert","danger");
+		else if(username.indexOf(" ")!=-1)
+		{
+			session.setAttribute("message", "Tên đăng nhập có dấu cách");
+			response.sendRedirect(request.getContextPath()+"/dang-nhap?action=login");
+		}
+		else if(password=="") {
+			session.setAttribute("message", "Bạn chưa nhập mật khẩu");
+			response.sendRedirect(request.getContextPath()+"/dang-nhap?action=login");
+		}
+		else if(new AccountService(cp).checkAccount(username, password, true,false)) {		
+			Account account =new AccountService(cp).getAccount(username, password);	
+			session.setAttribute("ACCOUNT", account);
+			session.setAttribute("message", null);
+			response.sendRedirect(request.getContextPath()+"/trangchu");
+			
+		}
+		else {	
+			session.setAttribute("message", "Tài khoản không tồn tại");
 			response.sendRedirect(request.getContextPath()+"/dang-nhap?action=login");
 		}
 		

@@ -9,7 +9,7 @@
 <body>
 	<div class="limiter login a">
 		
-					<div class="container-login100 " style="background-image: url('templates/hudala/images/bg-01.jpg');">
+					<div class="container-login100 " style="background-image: url('images/bg-01.jpg');">
 		
 					<div class="container-animation" style="background-color: white">
 					<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
@@ -21,7 +21,7 @@
 	
 						<div class="wrap-input100 validate-input m-b-23" data-validate = "Ho va ten">
 							<span class="label-input100">Nhập họ tên</span>
-							<input class="input100" type="text" name="fullname" placeholder="Nhập họ và tên">
+							<input class="input100" type="text" name="fullname" placeholder="Nhập tên tài khoản">
 							<span class="focus-input100" data-symbol="&#xf206;"></span>
 						</div>					
 						<div class="wrap-input100 validate-input m-b-23" data-validate = "Tài khoản không hợp lệ">
@@ -41,6 +41,13 @@
 							<input class="input100" type="password" name="password2" placeholder="Xác nhận mật khẩu">
 							<span class="focus-input100" data-symbol="&#xf190;"></span>
 						</div>
+						<br/>
+						<br/>
+						<c:if test="${not empty messSign}">
+							<div class="alert alert-danger">
+									${messSign}
+							</div>
+						</c:if>
 						<div class="text-right p-t-8 p-b-31">
 							<a href="#">
 								Quên mật khẩu?
